@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0307 HTML수업</title>
+</head>
+
+<body>
+    <!-- 주석은 브라우저에는 나타나지 않지만 클라이언트에게는 보여집니다 -->
+    "안녕하세요" &nbsp;&nbsp;&nbsp; 반갑습니다.
+    html은 처음입니다.
+
+    <p style="color: blue;">첫 코드입니다.</p>
+    <br><br>
+    내부 문자는 꼭 태그 사이에 적어주세요
+    <br><br>
+    <p><strong><small>굵고 작고 <em>기울어진</em> 글씨가 되었습니다</small></strong></p>
+    <br><br>
+    <!-- title은 br이 기본적으로 들어가 있다 볼드체 -->
+    <h1>title1</h1>
+    <h2>title2</h2>
+    <h3>title3</h3>
+    <h4>title4</h4>
+    <h5>title5</h5>
+    <h6>title6</h6>
+
+    <br><br>
+    <p> paragrph의 약어로 단락의 위 아래에 약간의 공백이 있다</p>
+    <br><br>
+
+    &nbsp; live server startup = Alt + L, O<br>
+
+    루프백을 지원하지 않으면
+    <hr>
+    <strong>내 컴퓨터 ipconfig 192.168.10.46 를 넣어서 사용합니다.</strong>
+    <b>strong과 b는 뭐가 다르죵??</b>
+
+    <br><br><br><br>
+
+    <ul> <!-- 여기는 절대 작성하면 안되는 곳 -->
+        <!-- li외에 다른 tag 사용 금지 -->
+        <li>첫번째</li>
+        <li>
+            <div>두번째 Submenu</div>
+            <ul>
+                <li> seb1</li>
+                <li> seb2</li>
+                <li> seb3</li>
+            </ul>
+        </li>
+        <li>세번째</li>
+    </ul>
+
+    <!-- ol Tag -->
+    <ol type="I" start="3">
+        <li>로마자로</li>
+        <li>3번부터시작하는</li>
+        <li>순서목록입니다.</li>
+        <li>굳이 설정 안 해도 기본값이 있어요</li>
+    </ol>
+
+
+    <br><br>
+    <dl>
+        <dt>title이구요</dt>
+        <dd>dd는 들여쓰기가 됩니다</dd>
+        <dd>dd는 여러번 쓸 수 있어요</dd>
+        <dt>title하나에</dt>
+        <dd>dd가 여러개!!</dd>
+
+    </dl>
+
+    <br><br>
+    <h3>표 태그 중요해요 </h3>
+    <figcaption>이건 figcaption이구요</figcaption>
+    <table border="1">
+        <caption>표1 - catpion</caption>
+
+        <body>
+            <!-- table : 셀 개념을 갖고 있다-->
+            <tr>
+                <!-- tr : X -->
+                <!-- td : 셀 개념을 갖고 있다 -->
+                <td colspan="3">text 1</td>
+                <td>text 2</td>
+                <td>text 3</td>
+                <td>text 4</td>
+            </tr>
+            <tr>
+                <td>text 5</td>
+                <td>text 6</td>
+                <td>text 7</td>
+                <td rowspan="2">text 8</td>
+            </tr>
+            <tr>
+                <td>text 9</td>
+                <td>text 10</td>
+                <td>text 11</td>
+                <td>text 12</td>
+            </tr>
+        </body>
+    </table>
+    <figcaption>이건 table밑에도 쓸 수 있어요</figcaption>
+    <br><br>
+    <!-- table 병합 -->
+    <table>
+        <caption>표1 - catpion</caption>
+        <thead style="color: #157474;">
+            <tr>
+                <th>text 1</th>
+                <th>text 2</th>
+                <th>text 3</th>
+                <th>text 4</th>
+            </tr>
+        </thead>
+        <!-- tbody는 꼭 써줍니다 -->
+        <tbody>
+            <tr>
+                <td>이 부분은 tbody의 영역입니다 text 5</td>
+                <td>text 6</td>
+                <td>text 7</td>
+                <td>text 8</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>text 9</td>
+                <td>text 10</td>
+                <td>text 11</td>
+                <td>text 12</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br><br>
+
+    <br><br>
+</body>
+
+</html>
