@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <h2>상품구성</h2>
+    <table border="1">
+        <caption>선물용, 가정용</caption>
+        <colgroup>
+        <col style="background-color: #eee;">
+        <col> 
+        <!-- 스타일을 지정하지 않아도 col 명시 -->
+        <col span="2" style="width: 150px;">
+        </colgroup>
+        <thead>
+        <tr>
+                <th>용도</th>
+                <th>중량</th>
+                <th>개수</th>
+                <th>가격</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="2">선물용 </td>
+            <td>3kg</td>
+            <td>소과 10~12</td>
+            <td>35,000원</td>
+
+        </tr>
+        <tr>
+            <td>5kg</td>
+            <td>소과 20~22</td>
+            <td>55,000원</td>
+        </tr>
+        <tr>
+                <td rowspan="2">가정용</td>
+                <td>3kg</td>
+                <td>소과 11~15</td>
+                <td>25,000원</td>
+
+        </tr>
+        <tr>
+                
+                <td>5kg</td>
+                <td>소과 15~18</td>
+                <td>45,000원</td>
+
+        </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>
