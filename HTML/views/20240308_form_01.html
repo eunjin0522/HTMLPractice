@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그 사용</title>
+    <style>
+        #lala { text-decoration-line: none;}
+
+        /* id이 름 앞에 샵을 써준다 */
+        input { background-color: antiquewhite;}
+
+        /* 앞에 아무런 표시가 없으면 tag명 */
+        label { color: blueviolet; }
+
+        /*앞에 온점을 찍고 class이름을 적는다 */
+        .tc-red { color: red;    font-style: italic;}
+
+        .bg-blue {background-color: blue;}
+
+        /* 스타일이 겹칠 경우 우선순위 :  id > class > tag  */
+        /* class는 {}로 묶인 곳에서 설정을 해주고 그걸 가져가서 씀 약간 메소드 같음 */
+    </style>
+    
+
+</head>
+
+<body>
+
+    <a href="#n4v">링크입니다</a>
+    <h1 class="tc-red bg-blue">input type 종류별</h1>
+    <form method="get" action="#">
+        <!-- # : TODO 느낌 // 위치정보의 느낌-->
+
+
+        <!-- name이면 data를 보내고 없으면 안 보냄 -->
+        <div>
+            <label for="lala">text</label>
+            <input type="text" name="n1" id="lala" class="input00 text">
+            <!--text를 누르면 text창에 커서가 깜빡임 -->
+            <!-- name  :상단 url 에 보여지는 이 속성의 이름 -->
+            <!-- value=사용자 입력값 -->
+        </div>
+
+        <div>
+            <span>password</span>
+            <input type="password" name="n2">
+        </div>
+
+        <div>
+            <span>hidden</span>
+            <input type="hidden" name="n3">
+            <!-- hidden은 사용자로부터 값을 받을 수 없기 때문에 반드시 value 속성을 넣어줘야한다 -->
+            <!-- 사용자가 접근 할 수 없지만 반드시 함께 보내야할 데이터를 담을 때 사용됨 ex) 카테고리 필더, 로그인 상태 유지 -->
+        </div>
+
+        <div>
+            <span>button - 사용자에게 입력값을 받지 않으므로 name속성이 필요없다!!!</span>
+            <input type="button" value="버튼1">
+            <!-- button은 data를 실어서 보내는 역할이 아님(사용자의 입력값을 받는게 아님) / 우리가 봐왔던 버튼은 checkbox나 radio에 이미지를 올려둔 것 -->
+            <!-- value넣어주지 않으면 안 보임 value : 버튼명 -->
+        </div>
+
+        <div>
+            <span>checkbox- name속성값으로 그룹핑 / 반드시 value값 </span><br>
+            <span>String[] n5Arr request.getParameterValues("n5"); - checkbox랑 짝꿍</span><br>
+            <!-- 체크 시 url에 on으로 표시 됨 : value값을 설정해주지 않아서 자동으로 넣어준 것-->
+            <label for="n4v">배구 : </label><input type="checkbox" name="n4" value="v" id="n4v">
+            <span>야구 : </span><input type="checkbox" name="n4" value="b" checked="checked">
+            <span>축구 : </span><input type="checkbox" name="n4" value="s" checked="checked">
+            <!-- 그룹핑 된 것들은 value 값이 달라야한다. -->
+            <br><span>lang</span>
+            <span>HTML : </span><input type="checkbox" name="n5" value="h">
+            <span>JAVA : </span><input type="checkbox" name="n5" value="j">
+            <!-- 같은 카테고리끼리 name은 같아야 한다. 그래야 스포츠데이터로, 언어 데이터로 갈테니까 -->
+            <!-- 모두 선택하기 가능 -->
+
+        </div>
+
+        <div>
+            <span>file </span>
+            <input type="file" name="n6">
+        </div>
+
+        <div>
+            <span>radio</span>
+            <span>JAVA :</span><input type="radio" name="n7" value="j">
+            <span>Oracle :</span><input type="radio" name="n7" value="o" checked="checked">
+            <!-- 동일한 name속성값을 가진 것 중에서 선택할 수 있다 -->
+            <!-- checked : 기본으로 체크가 되어있음 / 안에 들어가는 값은 상관없지만 보통 checkec로 씀 -->
+            <!-- 같은 그룹의 radio들이니까 checked는 하나만 있을 수 있겠죵? -->
+            <!-- 그룹핑 된 것들은 value 값이 달라야한다. -->
+            <span>HTML :</span><input type="radio" name="n10" value="b">
+            <span>CSS :</span><input type="radio" name="n10" value="c">
+            <span>JS :</span><input type="radio" name="n10" value="js">
+        </div>
+
+        <div>
+            <span>submit- 사용자에게 입력값을 받지 않으므로 name속성이 필요없다!!!</span>
+            <input type="submit" name="n8">
+            <!-- submit을 하면 doGet방식으로 작동됨 name이 중요 -->
+            <!-- 각 name에 담긴 데이터를 실어서 보낸다-->
+        </div>
+        <div>
+            <span>reset- 사용자에게 입력값을 받지 않으므로 name속성이 필요없다!!!</span>
+            <input type="reset" name="n9">
+            <!-- reset이 소속된 form Tag 내부 전체에 영향력을 끼친다 -->
+        </div>
+    </form>
+
+    <h1>web copyroot dept insert</h1>
+    <form method="post" action="http://127.0.0.1:8080/copyroot/dept/insert" target="_blank">
+        <!-- form tag를 묶어주는 역할 / 얼만큼 묶어서 저 action으로 보내고 싶은거니 -->
+        <!-- 페이지 이동과 전송이 주 -->
+
+        <fieldset name="이름" form="formName">
+            <legend>부서 추가</legend>
+            <div>
+                <!-- input은 inline 태그이다. 균형을 맞춰주기 위해 span으로 inline 규격을 맞춰준다 -->
+                <span>부서번호 : </span>
+                <input type="text" name="deptno" placeholder="부서번호 2자리">
+            </div>
+            <div>
+                <span>부서명 : &nbsp;&nbsp;</span>
+                <input type="text" name="dname">
+            </div>
+            <div>
+                <span>지역 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input type="text" name="loc" value="seoul">
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="등록">
+            <input type="reset" value="취소">
+        </div>
+    </form>
+</body>
+
+</html>
