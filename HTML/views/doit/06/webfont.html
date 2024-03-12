@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webfont</title>
+    <style>
+        @font-face {
+            font-family: 'Ostrich';
+            src: local('Ostrich Sans'),
+            url('fonts/ostrich-sans-boild.woff') format('woff'),
+            url('fonts/ostrich-sans-boild.ttf') format('truetype'),
+            url('fonts/ostrich-sans-boild.svg') format('svg');
+
+        }
+        .wfont{
+            font-family: 'Ostrich',sans-serif;
+        }
+        p{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="wfont">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+</body>
+</html>
