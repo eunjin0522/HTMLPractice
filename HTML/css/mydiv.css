@@ -1,0 +1,97 @@
+/* layout */
+body{
+    background-color: orange;
+    border: 1px solid black;
+}
+div.wrap{
+    background-color: aqua;
+    border: 1px solid black;
+}
+header{
+      /* layout - 01 */
+      /* 전체화면을 기준으로 가운데 지정 
+      width
+      margin : 0 auto;
+      */
+    /*너비지정과 가운데 정렬 */
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    border: 1px solid black;
+}
+.wrap > .wrap-nav {
+    background-color: aliceblue;
+    border: 1px solid black;
+
+}
+.wrap > .wrap-nav >nav{
+    width: 960px;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+.wrap-content{
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+section{
+      /* layout - 02 */
+    /* display:block이지만 일부영역만 사용*/
+    /*-set-
+    왼쪽 정렬 
+    넓이 지정*/
+    float: left;
+    width: 80%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: coral;
+}
+aside{
+      /* layout - 02 */
+    /* 오른쪽 정렬 */
+    float: right;
+    width: 20%;
+    box-sizing: border-box;
+
+    background-color: cornflowerblue;
+    border: 1px solid black;
+}
+article{
+
+    border: 1px solid black;
+}
+footer{
+    /* layout - 02 */
+    /* 단독으로 수직 정렬 */
+    /* 윗 부분으로 밀려 올라가는 것을 방지 */
+    /* display block 영역이지만 다시 block수직 정렬하고 싶을 때 */
+    /* 새로운 수직 정렬을 하겠단 의미 */
+    clear: both;
+
+    width: 960px;
+    margin: 0 auto;
+
+    padding: 10px;
+    /* boder padding(10px)까지 합해서  box사이즈를 지정 - 깔끔해짐 */
+    /* default값은 context-box이다 */
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+/* font size */
+.fs-1{
+    font-size: 24px;
+}
+.fs-2{
+    font-size: 18;
+}
+.fs-3{
+    font-size: 16px;
+}
+.fs-4{
+    font-size: 12px;
+}

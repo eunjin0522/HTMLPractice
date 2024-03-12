@@ -1,0 +1,12 @@
+#lala { text-decoration-line: none;}
+
+/* id이 름 앞에 샵을 써준다 */
+input { background-color: antiquewhite;}
+
+/* 앞에 아무런 표시가 없으면 tag명 */
+label { color: darkslategray; background-color: darkseagreen;}
+
+/*앞에 온점을 찍고 class이름을 적는다 */
+.tc-red { color: red;    font-style: italic;}
+
+.bg-blue {background-color: blue;}

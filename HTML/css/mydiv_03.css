@@ -1,0 +1,122 @@
+/* layout */
+body{
+    background-color: rgb(236, 148, 16);
+    border: 1px solid black;
+}
+div.wrap{
+    background-color: aqua;
+    border: 1px solid black;
+}
+.wrap-main{
+    margin-bottom: 10px;
+}
+header{
+      /* layout - 01 */
+      /* 전체화면을 기준으로 가운데 지정 
+      width
+      margin : 0 auto;
+      */
+    /*너비지정과 가운데 정렬 */
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    border: 1px solid black;
+}
+.wrap > .wrap-nav {
+    background-color: aliceblue;
+    border: 1px solid black;
+
+}
+.wrap > .wrap-nav >nav{
+    width: 960px;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+.wrap-content{
+    /*relative - 위치 조정 - 나로부터 새로운 기준접을 잡을 때*/
+    /*나의 자식들의 기준점이 됨 0,0*/
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    /* left: 10px;
+    top: 15px; */
+    
+    overflow: hidden;
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+section{
+      /* layout - 04 */
+    /* display:block이지만 수평으로 배치
+    position*/
+    position: absolute;
+    /* relative가 있는 곳에서 height 설정 */
+    top : 0;
+    left: 0;
+    
+    width: 80%;
+
+    box-sizing: border-box;
+
+    background-color: coral;
+}
+aside{
+      /* layout - 04 */
+    /* display:block이지만 수평으로 배치
+    position*/
+    position: absolute;
+    top: 0;
+    left:  80%;
+    /* right: 0;   */
+    width: 15%;
+    /* 둘 다 같은 의미 */
+    /* left : 80%; */
+
+    box-sizing: border-box;
+
+    background-color: cornflowerblue;
+    border: 1px solid black;
+}
+article{
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.wrap-nav> nav > ul > li,
+footer > nav > ul>li{
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+}
+footer{
+    /* layout - 02 */
+    position: relative;
+    overflow: hidden;
+
+    width: 960px;
+    margin: 0 auto;
+
+    padding: 10px;
+    /* boder padding(10px)까지 합해서  box사이즈를 지정 - 깔끔해짐 */
+    /* default값은 context-box이다 */
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+/* font size */
+.fs-1{
+    font-size: 24px;
+}
+.fs-2{
+    font-size: 18;
+}
+.fs-3{
+    font-size: 16px;
+}
+.fs-4{
+    font-size: 12px;
+}
