@@ -1,0 +1,121 @@
+.wrap-header {
+    background-color: lemonchiffon;
+
+}
+
+header {
+    width: 960px;
+    margin: 0 auto;
+    height: 120px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* ul 나란히 */
+ul {
+    overflow: hidden;
+}
+
+header nav.tnb {
+    position: absolute;
+    right: 0;
+}
+
+header nav.bnb {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+ul>li{
+    float: left;
+}
+
+nav>ul>li>a {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav.tnb>ul>li:first-child >a{
+    border-left: 1px solid black;
+    border-radius:  10px 0 0 10px ;
+}
+nav.tnb>ul>li:last-child >a{
+    border-radius: 0 10px 10px 0;
+}
+nav.bnb>ul>li:first-child >a{
+    border-left: 1px solid black;
+    border-radius:  5px 0 0 5px ;
+}
+nav.bnb>ul>li:last-child >a{
+    border-radius: 0 5px 5px 0;
+}
+
+.logo{
+    position: absolute;
+    left: 60px;
+    top: 50px;
+}
+nav.bnb, .logo{
+    clear: both;
+}
+/* body{} */
+.wrap-main {
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+section {
+    float: left;
+    width: 750px;
+    margin-right: 10px;
+    box-sizing: border-box;
+
+}
+
+article {
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+aside {
+    border: 1px solid black;
+    float: left;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 5px;
+
+}
+
+.wrap-footer {
+    clear: both;
+    background-color: darkseagreen;
+    position: relative;
+}
+
+footer {
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+a{
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    background-color: black;
+    color: white;
+}
+h1{
+    font-size: 1.3em;
+}
