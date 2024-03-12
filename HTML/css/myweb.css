@@ -6,8 +6,6 @@
     /* width: 100%이 생략 */
     background-color:blanchedalmond;
     /* 자식elements 높이 정확히 계산함 - absoulte제외 */
-    overflow: hidden;
-
 }
 
 header {
@@ -181,7 +179,7 @@ aside {
 footer {
     width: 960px;
     margin: 0 auto;
-
+    box-sizing: border-box;
     padding: 10px 0;
 }
 a{
