@@ -18,3 +18,31 @@ aside ul>li>a>div:last-child {
     float: left;
 }
 
+/*input중에서 type이 radio인 것들은 안 보이게 설정*/
+/*[] 속성을 찾아줌*/
+input[type=radio] {
+    /* 화면에 안 보이게 함 - 공간차지 없음 */
+    display: none;
+
+    /* 공간을 차지하면서 화면에 보이지 않음 */
+    /* visibility: hidden; */
+}
+
+/*first click*/
+input[type=radio]:nth-of-type(1):checked~div:nth-of-type(1) {
+    display: block;
+}
+
+input[type=radio]:nth-of-type(1):checked~div:nth-of-type(2) {
+    display: none;
+}
+
+/*second click*/
+input[type=radio]:nth-of-type(2):checked~div:nth-of-type(1) {
+    display: none;
+}
+
+input[type=radio]:nth-of-type(2):checked~div:nth-of-type(2) {
+    display: block;
+}
+
