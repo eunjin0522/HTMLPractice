@@ -1,0 +1,34 @@
+.wrap-header{
+    background-color: aquamarine;
+}
+header{
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.wrap-main{
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+aside{
+    float: left;
+    width: 10%;
+    margin: 0 5px;
+}
+section{
+    float: left;
+    width: 70%;
+    margin: 0 5px;
+}
+.wrap-footer{
+    clear: both;
+    background-color: greenyellow;
+}
+footer{
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
