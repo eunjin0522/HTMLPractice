@@ -1,0 +1,41 @@
+/* 색상, 폰트,  */
+body{
+    font-family: cursive;
+    font-size: 1.1em;
+}
+
+h1 {
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+h3 {
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+.nanum-brush {
+    font-family: "Nanum Brush Script", cursive;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    /*줄간격, 중간정렬*/
+}
+/* a link */
+a{ 
+
+    text-decoration: none;
+    color: black;
+}
+/* a:link{
+    color: aqua;
+}
+a:visited{
+    color: tomato;
+}
+a:active{
+    color: chartreuse;
+} */

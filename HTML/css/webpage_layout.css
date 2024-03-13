@@ -1,0 +1,37 @@
+/* header */
+.wrap-header {
+    background-color: bisque;
+}
+
+.wrap-header>header,
+.wrap-footer>footer {
+    /* 중앙배치 */
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* footer */
+.wrap-footer {
+    background-color: aquamarine;
+    /* float배치 해제 */
+    clear: both;
+}
+
+/* main */
+.wrap-main {
+    background-color: beige;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.wrap-main>section {
+    /* 왼쪽 배치 */
+    width: 750px;
+    float: left;
+}
+
+.wrap-main>aside {
+    /* 왼쪽 배치 */
+    width: 200px;
+    float: left;
+}
