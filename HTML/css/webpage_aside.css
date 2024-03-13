@@ -19,18 +19,18 @@ aside ul>li>a>div:last-child {
     float: left;
 }
 aside ul>li{
+    /* float 해제 */
     clear: both;
+    /* float 부모 */
     overflow: hidden;
+
+    padding: 10px;
 }
 
 /*input중에서 type이 radio인 것들은 안 보이게 설정*/
-/*[] 속성을 찾아줌*/
 input[type=radio] {
     /* 화면에 안 보이게 함 - 공간차지 없음 */
     display: none;
-
-    /* 공간을 차지하면서 화면에 보이지 않음 */
-    /* visibility: hidden; */
 }
 
 /*first click*/
@@ -51,4 +51,11 @@ input[type=radio]:nth-of-type(2):checked~div:nth-of-type(2) {
     display: block;
 }
 
-/*  */
+/* 동일한 선택자임에도 분리해서 작성하기도 한다 - 수정용이, 가독성 */
+/* top, bottom의 중복선 제거 */
+aside ul>li{
+    border: 1px solid black;
+}
+aside ul>li:not(:last-child){ /*last-child를 제외한 나머지 li*/
+    border-bottom: 0;
+}
