@@ -1,5 +1,52 @@
-section article{
+section article {
     border: 1px solid black;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+section article.article-1 div.flex-3 {
+    display: flex;
+    /*세로로 나열*/
+    /* flex-direction: column; */
+
+    /* wrap방식 - 마지막에 여백이 조금 남음 
+    grid - 여백없이 딱맞게 떨어짐 */
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+section article.article-1 div.flex-3>div {
+    /* margin: 10px; */
+
+    /* flex 자식의 최대 크기 */
+    width: 30%;
+    border: 1px solid black;
+}
+
+section article.article-3 div.inputform {
+    flex-wrap: wrap;
+}
+section article.article-3 div.inputform >div{
+    display: flex;
+    width: 25%;
+    border: 1px solid black;
+}
+
+section article.article-2 div.grid-3 {
+    display: grid;
+    /*자동width설정 3개 열 - content양에 따라 넓이가 달라짐*/
+    /* grid-template-columns: auto auto auto ;  */
+    grid-template-columns: 1fr 1fr 1fr;
+    /*1:1:1형태*/
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+section article.article-2 div.grid-3>div {
+    border: 1px solid black;
+}
+
+section article.article-2 div.grid-3>div.item2 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
 }
