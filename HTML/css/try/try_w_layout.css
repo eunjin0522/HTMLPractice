@@ -1,0 +1,31 @@
+.wrap-header{
+    background-color:azure;
+}
+.wrap-header > header
+, .wrap-footer > footer{
+    width: 960px;
+    margin: 0 auto;
+}
+.wrap-footer{
+    clear: both;
+    background-color:coral;
+}
+
+.wrap-main{
+    overflow: hidden;
+    background-color: #fffff5;
+    width: 960px;
+    margin: 0 auto;
+
+    padding: 10px 0 ;
+}
+
+.wrap-main>section{
+    float: left;
+    width: 750px;
+    margin-right: 10px;
+}
+.wrap-main>aside{
+    float: left;
+    width: 200px;
+}

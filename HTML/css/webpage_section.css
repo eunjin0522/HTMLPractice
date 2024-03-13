@@ -27,7 +27,6 @@ section article.article-3 div.inputform {
     flex-wrap: wrap;
 }
 section article.article-3 div.inputform >div{
-    display: flex;
     width: 25%;
     border: 1px solid black;
 }
