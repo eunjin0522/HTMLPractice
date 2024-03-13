@@ -1,0 +1,221 @@
+/* 작업순서 */
+/* 기본(최적) 해상도 - 960px */
+
+/* header */
+.wrap-header {
+    /* width: 100%이 생략 */
+    background-color:blanchedalmond;
+    /* 자식elements 높이 정확히 계산함 - absoulte제외 */
+}
+
+header {
+    /* 1.중앙정렬 - width있는 곳에 모두 넣어줌 */
+    width: 960px;
+    margin: 0 auto;
+    /* margin */
+    /* margin-bottom: 10px; */
+
+    /* padding */
+    padding-bottom: 10px;
+    /* 여기에 색을 넣으면 크기에 맞춰 색이 나타남 */
+
+    /* position - 기준점 => 자식 absolute있다면 */
+    position: relative;
+    height: 160px;
+}
+
+/* contant */
+body {
+    font-family: cursive;
+    font-size: 1.1em;
+    /*약 16px - 비율로 나타냄 2em = 기존의 200%*/
+}
+
+/*float의 부모 노드에 overflow를 해주면 높이가 설정이 된다.*/
+ul {
+    overflow: hidden;
+}
+
+/*nav에 있는 목록만 적용할 것이니 nav로 수정*/
+nav>ul>li {
+    /* display: inline-block; */
+    float: left;
+    /* border: 1px solid black; */
+    /* padding: 5px; */
+
+}
+
+nav>ul>li >a{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+nav.tnb>ul>li:first-child >a{
+    border-left: 1px solid black;
+    border-radius: 15px 0 0 15px;
+}
+
+nav.tnb>ul>li:last-child>a {
+    border-radius: 0 15px 15px 0;
+}
+
+nav.bnb>ul>li:first-child >a{
+    border-left: 1px solid black;
+    border-radius: 10px 0 0 10px;
+}
+
+nav.bnb>ul>li:last-child>a {
+    border-radius: 0 10px 10px 0;
+}
+
+nav.bnb,
+.logo {
+    /* float의 동위요소에 clear */
+    clear: both;
+}
+
+/* 위치가 헷갈리면 부모 노드를 앞에 적어주자 : header를 기준점으로 해서 position을 배치할거야 라는 의미*/
+header nav.tnb {
+    /* position 배치 */
+    position: absolute;
+    right: 0;
+    /*right 맨 끝*/
+    /* header에 position: relative를 작성해줘야 header를 기준으로 삼는다
+    만약 새로운 기준점을 주지 않으면 body가 기준점이 된다  */
+}
+
+header nav.bnb {
+    /* position 배치 */
+    position: absolute;
+    right: 0;
+    /*right 맨 끝*/
+    bottom: 0;
+}
+
+header div.logo {
+    /* position 배치 */
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.wrap-main {
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+section {
+    /* 2.float 배치 */
+    float: left;
+    width: 750px;
+    /* 테두리 - 크기 감안 */
+
+    margin-right: 10px;
+    box-sizing: border-box;
+
+}
+
+article {
+    /* 테두리 - 크기 감안 */
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+/* 우선순위에서 article보다 높다 */
+article:last-child {
+    /* article이 누군가의 막내일 때 */
+    margin-bottom: 0;
+}
+
+h1 {
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+h3 {
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+.nanum-brush {
+    font-family: "Nanum Brush Script", cursive;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    /*줄간격, 중간정렬*/
+}
+
+aside {
+    /* 2.float 배치 */
+    float: left;
+    width: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+
+/* footer */
+.wrap-footer {
+    /* 2.clear 배치 */
+    clear: both;
+    background-color: greenyellow;
+
+    /* article의 margin-bottom만큼 이동 배치 */
+    /* relative - 원래 위치에서 살짝 이동 */
+    position: relative;
+    /*position  OR  top 선택*/
+    /* top: -10px; */
+}
+
+footer {
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+nav a{ /*nav의 후손*/
+    display: inline-block; /*inline형태인 a를 inline, block 형태 모두 가능하게 만든다 -> 크기 설정 가능*/
+    padding: 5px;
+    /* a에 padding을 넣어줘야 주위에 가도 클릭이 가능 */
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    background-color: black;
+    color: white;
+}
+/* 03/12 */
+
+
+
+/* 방법2  - .tab-item>ul>li>a> div:first-child*/
+.tab-item>ul>li div:first-child{
+float: left; /*inline-block도 가능 다만 font크기에 맞춘 스페이스가 하나 들어감*/
+width: 45px; /*여유 공간은 padding OR margin으로 대체*/
+margin-right: 10px;
+}
+.tab-item>ul>li div:last-child{
+float: left; 
+width: 120px;
+}
+.tab-item>ul>li{
+    /*동위 선택자에 걸어줘야함*/
+    clear: both;
+    
+    padding: 5px;
+}
+
+.tab-item>ul>li{
+overflow: hidden; /*높이 측정*/
+}
