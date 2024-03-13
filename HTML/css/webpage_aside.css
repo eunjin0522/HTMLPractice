@@ -4,17 +4,17 @@
 } 
 가독성이 떨어질 경우 전체적으로 float설정을 우선한다*/
 
-ul>li {
-    /* float 해제 */
-    clear: both;
-    /* float 부모 */
-    overflow: hidden;
-}
-ul>li>a>div:first-child {
+/*구역의 태그를 적어준다 - 혼선 방지*/
+/* 공통으로 반영할 것이 아니기 때문에 aside를 계속 적어준다 */
+aside ul>li>a>div:first-child {
     /* float 설정 */
-    width: 45px;  float: left;
+    width: 45px;
+    float: left;
 }
-ul>li>a>div:last-child {
+
+aside ul>li>a>div:last-child {
     /* float 설정 */
-    width: 120px;  float: left;
+    width: 120px;
+    float: left;
 }
+
