@@ -1,6 +1,6 @@
 /* header */
 .wrap-header {
-    background-color: bisque;
+    background-color:azure;
 }
 
 .wrap-header>header,
@@ -12,24 +12,34 @@
 
 /* footer */
 .wrap-footer {
-    background-color: aquamarine;
-    /* float배치 해제 */
+    background-color:greenyellow;
+    /* float - 동위 해제 */
     clear: both;
 }
 
 /* main */
 .wrap-main {
-    background-color: beige;
+    background-color: #fffff5;
     width: 960px;
     margin: 0 auto;
+
+    /* float - 부모 height을 위해 */
+    overflow: hidden;
+
+    /* background - color 빈 공간 발생 
+    margin-top: 10px;
+    margin-bottom: 10px; */
+
+    /* background-color가 적용됨 */
+    padding: 10px 0 ;
 }
 
 .wrap-main>section {
     /* 왼쪽 배치 */
     width: 750px;
     float: left;
+    margin-right: 10px;
 }
-
 .wrap-main>aside {
     /* 왼쪽 배치 */
     width: 200px;
