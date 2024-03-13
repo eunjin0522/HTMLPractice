@@ -1,0 +1,32 @@
+/* header */
+header nav>ul{
+    /* float - 부모노드 overflow hidden */
+    overflow: hidden;
+}
+header nav>ul>li{
+    /* float - width 제외 - 고정크기x -> content내용에 따라 크기지정(가변적)*/
+    float: left;
+}
+header nav
+, header div.logo{
+    /* float 해제 */
+    clear: both;
+}
+
+header{
+    /*1. 나의 위치를 조금 이동시킬 목적 */
+    /*2. 자식들의 기준점 */
+    position: relative;
+    height: 160px;
+
+}
+header .tnb{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+header .bnb{
+    position: absolute;
+    right: 0;    
+    bottom: 0;
+}

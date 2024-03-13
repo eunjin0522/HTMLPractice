@@ -28,26 +28,26 @@ aside ul>li{
 }
 
 /*input중에서 type이 radio인 것들은 안 보이게 설정*/
-input[type=radio] {
+aside input[type=radio] {
     /* 화면에 안 보이게 함 - 공간차지 없음 */
     display: none;
 }
 
 /*first click*/
-input[type=radio]:nth-of-type(1):checked~div:nth-of-type(1) {
+aside input[type=radio]:nth-of-type(1):checked~div:nth-of-type(1) {
     display: block;
 }
 
-input[type=radio]:nth-of-type(1):checked~div:nth-of-type(2) {
+aside input[type=radio]:nth-of-type(1):checked~div:nth-of-type(2) {
     display: none;
 }
 
 /*second click*/
-input[type=radio]:nth-of-type(2):checked~div:nth-of-type(1) {
+aside input[type=radio]:nth-of-type(2):checked~div:nth-of-type(1) {
     display: none;
 }
 
-input[type=radio]:nth-of-type(2):checked~div:nth-of-type(2) {
+aside input[type=radio]:nth-of-type(2):checked~div:nth-of-type(2) {
     display: block;
 }
 
