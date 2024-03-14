@@ -49,3 +49,27 @@ section article.article-2 div.grid-3>div.item2 {
     grid-column: 3;
     grid-row: 1 / span 2;
 }
+section .flex-item-card{
+    display: flex;
+    flex-direction: column;
+}
+section .flex-item-card>.flex-icons{
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+}
+section .fullsizeimg{
+    width: 100%;
+
+}
+section .c-clip{
+    border: 1px solid black;
+    width: 100px;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+}
+section .c-ellipsis{
+    width: 100px;
+    border: 1px solid black;
+}

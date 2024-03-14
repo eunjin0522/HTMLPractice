@@ -1,0 +1,38 @@
+
+.wrap-header {
+    background-color: azure;
+}
+/* 부모넓이가 내 넓이이니 굳이 지정해줄 필요없음 */
+/*  */
+.wrap-footer {
+    background-color: greenyellow;
+
+    /* float - 동위 - 해제 */
+    clear: both;
+}
+.wrap-footer > footer{
+    /* 중앙 배치 */
+    /* width: 100vw;  */
+    margin: 0 auto;
+    
+}
+/*  */
+.wrap-main {
+    background-color: #fffff5;
+
+    /* float - 부모 height를 위해  */
+    overflow: hidden;
+
+    padding: 10px 0;
+
+}
+.wrap-main > section{
+    /* float 왼쪽 배치 */
+    width: calc(100vw - 210px); float: left;
+
+    margin-right: 10px;
+}
+.wrap-main > aside{
+    /* float 왼쪽 배치 */
+    width: 200px; float: left;
+}
