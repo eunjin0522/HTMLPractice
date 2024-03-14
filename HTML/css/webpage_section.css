@@ -65,6 +65,7 @@ section .fullsizeimg{
 section .c-clip{
     border: 1px solid black;
     width: 100px;
+    /* 세트로 */
     text-overflow: clip;
     white-space: nowrap;
     overflow: hidden;

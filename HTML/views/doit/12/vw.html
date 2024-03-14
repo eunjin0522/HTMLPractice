@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리 사용하기</title>
+    <style>
+        h1 {
+            font-size: 5vw;
+            text-align: center;
+        }
+
+        body {
+            background: url(../../../images/gomgom.png) no-repeat fixed;
+            /*기본배경*/
+            background-size: cover;
+        }
+
+        @media screen and (max-width:1024px) {
+            body {
+                background: url(../../../images/jjang.jpg) no-repeat fixed;
+                /*기본배경*/
+                background-size: cover;
+            }
+        }
+        @media screen and (max-width:768px) {
+
+            body {
+                background: url(../../../images/123.jpg) no-repeat fixed;
+                /*기본배경*/
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hello</h1>
+</body>
+
+</html>
