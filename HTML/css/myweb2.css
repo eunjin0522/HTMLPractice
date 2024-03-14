@@ -4,7 +4,7 @@
 /* header */
 .wrap-header {
     /* width: 100%이 생략 */
-    background-color:blanchedalmond;
+    background-color: blanchedalmond;
     /* 자식elements 높이 정확히 계산함 - absoulte제외 */
 }
 
@@ -45,14 +45,14 @@ nav>ul>li {
 
 }
 
-nav>ul>li >a{
+nav>ul>li>a {
     border-top: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
 
 }
 
-nav.tnb>ul>li:first-child >a{
+nav.tnb>ul>li:first-child>a {
     border-left: 1px solid black;
     border-radius: 15px 0 0 15px;
 }
@@ -61,7 +61,7 @@ nav.tnb>ul>li:last-child>a {
     border-radius: 0 15px 15px 0;
 }
 
-nav.bnb>ul>li:first-child >a{
+nav.bnb>ul>li:first-child>a {
     border-left: 1px solid black;
     border-radius: 10px 0 0 10px;
 }
@@ -105,6 +105,7 @@ header div.logo {
     width: 960px;
     margin: 0 auto;
     box-sizing: border-box;
+    padding: 15px 0 ;
 }
 
 
@@ -183,45 +184,55 @@ footer {
     box-sizing: border-box;
     padding: 10px 0;
 }
-nav a{ /*nav의 후손*/
-    display: inline-block; /*inline형태인 a를 inline, block 형태 모두 가능하게 만든다 -> 크기 설정 가능*/
+
+nav a {
+    /*nav의 후손*/
+    display: inline-block;
+    /*inline형태인 a를 inline, block 형태 모두 가능하게 만든다 -> 크기 설정 가능*/
     padding: 5px;
     /* a에 padding을 넣어줘야 주위에 가도 클릭이 가능 */
     text-decoration: none;
     color: black;
 }
 
-nav a:hover{
+nav a:hover {
     background-color: black;
     color: white;
 }
+
 /* 03/12 */
 
 
 
 /* 방법2  - .tab-item>ul>li>a> div:first-child*/
-.tab-item>ul>li div:first-child{
-float: left; /*inline-block도 가능 다만 font크기에 맞춘 스페이스가 하나 들어감*/
-width: 45px; /*여유 공간은 padding OR margin으로 대체*/
-margin-right: 10px;
+.tab-item>ul>li div:first-child {
+    float: left;
+    /*inline-block도 가능 다만 font크기에 맞춘 스페이스가 하나 들어감*/
+    width: 45px;
+    /*여유 공간은 padding OR margin으로 대체*/
+    margin-right: 10px;
 }
-.tab-item>ul>li div:last-child{
-float: left; 
-width: 120px;
+
+.tab-item>ul>li div:last-child {
+    float: left;
+    width: 120px;
 }
-.tab-item>ul>li{
+
+.tab-item>ul>li {
     /*동위 선택자에 걸어줘야함*/
     clear: both;
 
     padding: 5px;
 }
 
-.tab-item>ul>li{
-overflow: hidden; /*높이 측정*/
+.tab-item>ul>li {
+    overflow: hidden;
+    /*높이 측정*/
 }
+
 /*input중에서 type이 radio인 것들은 안 보이게 설정*/
 /*[] 속성을 찾아줌*/
-input[type=radio]{
+input[type=radio] {
     /* 화면에 안 보이게 함 - 공간차지 없음 */
     display: none;
 
@@ -233,47 +244,55 @@ input[type=radio]{
 /* input:checked{display: none;} */
 
 /*first click*/
-input[type=radio]:nth-of-type(1):checked
-~div:nth-of-type(1){
-display: block;
+input[type=radio]:nth-of-type(1):checked~div:nth-of-type(1) {
+    display: block;
 }
-input[type=radio]:nth-of-type(1):checked
-~div:nth-of-type(2){
-display: none;
+
+input[type=radio]:nth-of-type(1):checked~div:nth-of-type(2) {
+    display: none;
 }
 
 /*second click*/
-input[type=radio]:nth-of-type(2):checked
-~div:nth-of-type(1){
-display: none;
-}
-input[type=radio]:nth-of-type(2):checked
-~div:nth-of-type(2){
-display: block;
+input[type=radio]:nth-of-type(2):checked~div:nth-of-type(1) {
+    display: none;
 }
 
-aside>label{
-    display: inline-block;
-    width: 45%;
-    height: 25px;
-   text-align: center;
+input[type=radio]:nth-of-type(2):checked~div:nth-of-type(2) {
+    display: block;
 }
-aside>label:nth-of-type(1){
+
+aside>label {
+    background-color: indianred;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+aside>label:nth-of-type(1) {
     border-right: 1px solid black;
     border-bottom: 1px solid black;
 }
-aside>label:last-of-type{
+
+aside>label:last-of-type {
     border-bottom: 1px solid black;
 }
-aside>label:hover{
+
+aside>label:hover {
     background-color: black;
     color: white;
 }
 
 /*선택자 (수열)*/
-.tab-item>ul>li:nth-child(2n){
+.tab-item>ul>li:nth-child(2n) {
     background-color: #ccc;
 }
-.tab-item>ul>li:nth-child(2n+1){
+
+.tab-item>ul>li:nth-child(2n+1) {
     background-color: #fff;
+}
+
+.tab-item {
+    clear: both;
 }

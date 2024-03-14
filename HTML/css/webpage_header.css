@@ -60,3 +60,50 @@ header a:hover{
     background-color: black;
     color:azure;
 }
+        /* 쿼리는 css에 작성 시 하단에 작용해야한다 */
+        @media screen and (min-width:960px) {
+            body {
+                font-size: 1.5em;
+            }
+        }
+
+        @media screen and (max-width:960px) {
+
+            /* header */
+            .wrap-header {
+                background-color: azure;
+            }
+
+            .wrap-header>header,
+            .wrap-footer>footer {
+                /* 중앙배치 */
+                width: 600px;
+                margin: 0 auto;
+            }
+
+            /* footer */
+            .wrap-footer {
+                /* float - 동위 해제 */
+
+                background-color: greenyellow;
+            }
+
+            /* main */
+            .wrap-main {
+                background-color: #fffff5;
+                width: 600px;
+                margin: 0 auto;
+
+                padding: 10px 0;
+            }
+
+            .wrap-main>section {
+                /* 왼쪽 배치 */
+                width: 600px;
+            }
+
+            .wrap-main>aside {
+                /* 왼쪽 배치 */
+                width: 500px;
+            }
+        }

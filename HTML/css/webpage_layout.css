@@ -12,9 +12,10 @@
 
 /* footer */
 .wrap-footer {
-    background-color:greenyellow;
     /* float - 동위 해제 */
     clear: both;
+    
+    background-color:greenyellow;
 }
 
 /* main */
