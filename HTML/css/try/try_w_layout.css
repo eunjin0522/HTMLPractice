@@ -8,12 +8,13 @@
 }
 .wrap-footer{
     clear: both;
-    background-color:coral;
+    background-color:rgb(179, 113, 255);
+    padding: 5px;
 }
 
 .wrap-main{
     overflow: hidden;
-    background-color: #fffff5;
+    background-color: #e2e8f3;
     width: 960px;
     margin: 0 auto;
 
