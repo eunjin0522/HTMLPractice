@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- 여기에 넣을 수 있지만 여기에 script쓰지 마세요 지저분합니다 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>첫 자바 스크립트</title>
+    <script>
+        //디버깅 용도로 많이 쓰임 - inline 방식
+        document.write("Hello It's me");
+        document.write("I just wondering");
+        document.write(".. from  Adele");
+
+        //화면이 공백이 된 상태에서 경고문구 창이 나타남
+        // window.alert("경고문구 ");
+        //화면이 보여지려면 ajax(비동기방식)이 활용되어야한다.
+    </script>
+</head>
+
+<body>
+    <h1 id="id2">javascript first</h1>
+    <h1 class="c2">javascript second</h1>
+    <h1 class="c2">javascript third</h1>
+
+    <script>
+        // boolean
+        var a8 = true;
+        console.log(typeof a8);
+        console.log(typeof(a8));
+        //number
+        var a10 = 123;
+        console.log(typeof a10);
+        //String
+        var a11 = "123";
+        console.log(typeof a11);
+        //object
+        var a13 = null;
+        console.log(typeof a13);
+
+        var a13={k1: 123, name:"hong", gender:"f"
+            ,score: {kor : 100, math : 95, eng : 85}};
+        console.log(a13);
+        console.log(a13.k1);
+        console.log(a13.gender);
+        console.log(a13.score.eng);
+
+        //undefined - 선언만 했을 때
+        var a12;
+        console.log(typeof a12);
+
+
+        var a3 = document.getElementById("id2");
+        // id는 겹치면 안된다. 애초에 유니크한 것이라서 처음에 찾으면 이후에 있는 id는 찾지 않는다.
+        console.log(a3);
+        var a4 = document.getElementsByClassName("c2");
+        console.log(a4);
+        
+        var a5 = document.getElementsByTagName("h1");
+        console.log(a5);
+        
+        // select를 통해서 찾아줘 - 첫번째만 
+        var a6=document.querySelector(".c2");
+        console.log(a6);
+        // 모두를 찾아줘
+        var a7=document.querySelectorAll(".c2");
+        console.log(a7);
+        // querySelector와 동일 0번째- 후에 위치가 바뀔 수도 있으니 위험도 존재
+        console.log(a7[0]);
+
+
+        
+    </script>
+
+    <script>
+        document.write("BODY");
+        document.write("Hello It's me");
+        document.write("I just wondering");
+        document.write(".. from 아델");
+
+
+        document.getElementsByTagName("h1")[0].innerHTML = '<a href="#">바꿈문자1</a>';
+        //h1태그 중 0번째 element의 내부문자를 '바꿈문자'로 바꾼다.
+        document.getElementsByTagName("h1")[1].innerText = '<a href="#">바꿈문자1</a>';
+    </script>
+    <script>
+        // var a1 = window.prompt("진입할 곳의 이름을 작성해주세요");
+        // 입력한 문자
+        // document.getElementsByTagName("h1")[2].innerHTML = a1;
+        // console.log(a1 );
+
+        // var a2=window.confirm("계속 진행하겠습니까?");
+        // console.log(a2);
+        // true/false반환
+    </script>
+</body>
+
+</html>
