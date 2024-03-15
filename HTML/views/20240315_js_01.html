@@ -24,10 +24,18 @@
     <h1 class="c2">javascript third</h1>
 
     <script>
+    //     window.alert("window객체의 alert라는 함수/메소드 호출");
+    //    alert("window객체명을 생략하고 접근할 수 있다");
+       window.document.getElementById("id2");
+       console.log(typeof(window));
+
         // boolean
         var a8 = true;
         console.log(typeof a8);
-        console.log(typeof(a8));
+        console.log(typeof (a8));
+        console.log(typeof (window.a8));
+        //window를 생략 가능하게 해둔 것
+
         //number
         var a10 = 123;
         console.log(typeof a10);
@@ -38,16 +46,56 @@
         var a13 = null;
         console.log(typeof a13);
 
-        var a13={k1: 123, name:"hong", gender:"f"
-            ,score: {kor : 100, math : 95, eng : 85}};
+        //object 안에 object 넣을 수 있음
+        var a13 = {
+            k1: 123, name: "hong", gender: "f"
+            , score: { kor: 100, math: 95, eng: 85 }
+            , a16 : function () {
+            console.log("***** a16 ******");
+            console.log("function형태의 변수 선언1");
+            console.log("변수명이 function이다");
+            console.log("자바와 동일한 위치에 함수명이 있습니다.");
+            return a10;
+        }
+        };
         console.log(a13);
         console.log(a13.k1);
         console.log(a13.gender);
         console.log(a13.score.eng);
 
+        console.log(a13.a16); //안의 값이 무엇이냐, 값을 보여달라
+        console.log(a13.a16()); //값과 실행결과를 나타냄
+
         //undefined - 선언만 했을 때
         var a12;
         console.log(typeof a12);
+        a12 = "값을 넣음으로써 a12의 자료형이 바뀜";
+        console.log(typeof a12);
+
+        //function
+        //a13은 함수이다
+        //함수 정이\ㅢ
+        var a13 = function () {
+            console.log("***** a13 ******");
+            console.log("function형태의 변수 선언1");
+            console.log("변수명이 function이다");
+            console.log("function형태의 변수 선언3");
+            console.log(123 * 2);
+        };
+        console.log(typeof a13);
+        console.log(a13);
+        // 함수 실행
+        a13();
+        var a14 = function () {
+            console.log("***** a14 ******");
+            console.log("function형태의 변수 선언1");
+            console.log("변수명이 function이다");
+            console.log("자바와 동일한 위치에 함수명이 있습니다.");
+            return a10;
+        };
+        a14();
+        var a15 = a14();
+        console.log(a15);
 
 
         var a3 = document.getElementById("id2");
@@ -55,21 +103,21 @@
         console.log(a3);
         var a4 = document.getElementsByClassName("c2");
         console.log(a4);
-        
+
         var a5 = document.getElementsByTagName("h1");
         console.log(a5);
-        
+
         // select를 통해서 찾아줘 - 첫번째만 
-        var a6=document.querySelector(".c2");
+        var a6 = document.querySelector(".c2");
         console.log(a6);
         // 모두를 찾아줘
-        var a7=document.querySelectorAll(".c2");
+        var a7 = document.querySelectorAll(".c2");
         console.log(a7);
         // querySelector와 동일 0번째- 후에 위치가 바뀔 수도 있으니 위험도 존재
         console.log(a7[0]);
 
 
-        
+
     </script>
 
     <script>

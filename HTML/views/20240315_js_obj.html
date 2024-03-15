@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj만 집중적으로</title>
+</head>
+<body>
+    <h1>object</h1>
+    <script>
+        var a13 = {
+            k1: 123, name: "hong", gender: "f"
+            , score: { kor: 100, math: 95, eng: 85 }
+            , a16 : function () {
+            console.log("***** a16 ******");
+            console.log("function형태의 변수 선언1");
+            console.log("변수명이 function이다");
+            console.log("자바와 동일한 위치에 함수명이 있습니다.");
+        }
+        };
+        console.log(a13);
+
+        //object 집중적
+        var a15={k1:1,k2:"s"};
+        a15.k3 = "a15에 새로운 key3를 생성하고 이것은 값입니다.";
+        console.log(a15);
+        a15.k2 = "banana";
+        console.log(a15);
+        a16 ="a16은 앞에 window. 가 생략 -> window객체의 기존 key a16이 없다면 생성, 없다면 값을 바꾼다.";
+        console.log(a16);
+        
+
+        </script>
+</body>
+</html>
