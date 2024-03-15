@@ -1,35 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>obj만 집중적으로</title>
+    <title>obj와 var</title>
+    <script>
+        //var 선언 없이 바로 함수라 선언되어 있어서 그 내용도 다 선언되어있다
+        function f1() { //f1도 수많은 window의 함수중 하나가 됨
+            var a3 = 3; //지역변수
+            a4 = 4; //전역변수 
+            console.log("--------- 3 ---------");
+            console.log("--------- 3 --------- 1 " + a1);
+            console.log("--------- 3 --------- 2 " + a2);
+            console.log("--------- 3 --------- 3 " + a3);
+            console.log("--------- 3 --------- a4 " + a4);
+
+            console.log("=====!! this!!==");
+            console.log(this);
+            console.log("=====!! this!!==");
+        }
+    </script>
 </head>
+
 <body>
     <h1>object</h1>
+    <h1 id="id2">javascript first</h1>
+    <h1 class="c2">javascript second</h1>
+    <h1 class="c2">javascript third</h1>
     <script>
+        function sayHello() {
+            let greeting = "hello"
+            return greeting
+        }
+        console.log(sayHello());
+        console.log(sayHello);
+
+
+    </script>
+
+    <script>
+        //전역변수로 쓸 변수를 let 선언
+        let c1; //이거 아무도 쓰지 말아줄래 , 중복 선언이 불가능하다
+        let c2;
+        let c3;
+        let c4;
+        //let a1;  // 다음 행부터 a1에 빨간줄이 표시된다. 겹치게 쓸 수 없음
+        //var a3;  //썼던 이름 또 다시 선언해도 무방함   
+
+
+        f1(); //함수 호출가능 -> global
+        console.log("확인해봐요 : " + a4)
+        // scope : f1 : f f1()
+        // scope : f2 : undefinde
+        //
+
+        var a1 = 1; //전역변수
+        console.log("--------- 1 --------- a1 " + a1);
+        console.log("--------- 1 --------- a2 " + a2);
+        //console.log("--------- 1 --------- a3 " + a3); //Error : a3 is not defined
+        //console.log("--------- 1 --------- a4 " + a4); //Error : a3 is not defined
+
+        {
+            console.log("--------- 2 ---------");
+            var a2 = 2;
+            console.log("--------- 2 --------- 1 " + a1);
+            console.log("--------- 2 --------- 2 " + a2);
+            //console.log("--------- 2 --------- a3 " + a3); //Error : a3 is not defined
+            //console.log("--------- 2 --------- a4 " + a4); //Error : a3 is not defined
+
+        }
+        let f2 = function () { //함수에도 let을 사용할 수 있다.
+            console.log("var로 변수만 선언되었다.");
+        }
+
+
+    </script>
+    <h1>변수영역</h1>
+    <script>
+        f1(); //함수 호출실행
+        console.log("--------- 4 --------- 1 " + a1);
+        console.log("--------- 4 --------- 2 " + a2);
+        // console.log("--------- 4 --------- 3 " + a3); //a3 is not defined
+        console.log("--------- 4 --------- a4 " + a4);
+
+    </script>
+
+    <script>
+        //-----------------------------------------------------
         var a13 = {
             k1: 123, name: "hong", gender: "f"
             , score: { kor: 100, math: 95, eng: 85 }
-            , a16 : function () {
-            console.log("***** a16 ******");
-            console.log("function형태의 변수 선언1");
-            console.log("변수명이 function이다");
-            console.log("자바와 동일한 위치에 함수명이 있습니다.");
-        }
+            , a16: function () {
+                console.log("***** a16 ******");
+                console.log("function형태의 변수 선언1");
+                console.log("변수명이 function이다");
+                console.log("자바와 동일한 위치에 함수명이 있습니다.");
+                console.log(this);
+
+            }
         };
         console.log(a13);
 
         //object 집중적
-        var a15={k1:1,k2:"s"};
+        var a15 = { k1: 1, k2: "s" };
         a15.k3 = "a15에 새로운 key3를 생성하고 이것은 값입니다.";
         console.log(a15);
         a15.k2 = "banana";
         console.log(a15);
-        a16 ="a16은 앞에 window. 가 생략 -> window객체의 기존 key a16이 없다면 생성, 없다면 값을 바꾼다.";
+        a16 = "a16은 앞에 window. 가 생략 -> window객체의 기존 key a16이 없다면 생성, 없다면 값을 바꾼다.";
         console.log(a16);
-        
+    </script>
 
-        </script>
 </body>
+
 </html>

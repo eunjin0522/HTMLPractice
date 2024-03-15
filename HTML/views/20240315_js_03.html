@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자와 제어문</title>
+</head>
+
+<body>
+    <h1 id="id1">연산자</h1>
+    <script>
+        var a1 = 10.23;
+        var a2 = "10.23";
+        console.log((a1 == a2) ? "==same" : "== nobbb")
+        console.log((a1 === a2) ? "===same" : "=== nobbb")
+
+
+    </script>
+
+    <script>
+        var a10;
+        var a11;
+
+        var sum;
+        console.log(">>>>>>1번 i")
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        console.log(">>>>>>2번 i")
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+    </script>
+    <script>
+        var arr = ["apple", "banana"]; //배열 =>  js : [], java : {} 
+        for (var i = 0; i < arr.length; i++) {
+            console.log("arr : " + arr[i]);
+        }
+        for (var item in arr) {
+            console.log(arr[item]);
+        }
+
+        var obj = {
+            k1: "seoul",
+            k2: "busan",
+            k3: "suwon",
+            k4: 123,
+            key: "obj.key는 obj배열에서 key라는 이름의 키의 value를 꺼내달라이다"
+        };
+        
+        console.log(obj["key"]);
+        console.log(obj.key); //같은 의미
+        console.log(typeof(obj.k4));  // number
+
+        for (var key in obj) {
+            console.log(key);
+            console.log(typeof(key)); //String
+            console.log(obj[key]);
+        }
+        var arr =["apple", "banana",function(){console.log("배열 안에 function넣기")},12.23];
+        for(var i in arr){
+            if(typeof(arr[i]) == "function"){
+                arr[i]();
+            }else{
+                console.log(arr[i]);
+            }
+        }
+        arr[10] = 3.141592;
+        for (var i in arr) {
+            console.log(i+" = "+arr[i]);
+        }
+        console.log(arr[11]); //undefined
+
+        var arrr = new Array(2);
+        arrr.push(3); //push맨뒤에 주가 index2에 들어감
+        arrr.push("apple");
+        arrr.push("2번방도 값이 들어가나요");
+        arrr[10] = "10방 입장 가능한가요";
+        for(var i in arrr){
+            console.log(i);
+            console.log(arrr[i]);
+        }
+        console.log(arrr.length);
+        for(var i = 0 ; i < arrr.length;i++){
+            console.log(i);
+            console.log(arrr[i]);
+        }
+        
+    </script>
+</body>
+
+</html>
