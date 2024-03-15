@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz 2</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <script>
+        let count =0;
+        let arr = new Array(count+1);
+    </script>
+</head>
+
+<body>
+    <h1>3의 배수 찾기</h1>
+    <script>
+        //서로 다른 자료형이더라도 같으냐 라는 질문에 대답 가능
+        //비교시엔 자료형을 맞춰주어야한다.
+        var num3 = window.prompt("숫자를 입력하세요");
+        num3 = Number.parseInt(num3);
+        for (var i = 1; i < num3 + 1; i++) {
+            if (i % 3 == 0) {
+                arr[count] =i;
+                count++;
+            }
+        }
+        for(var i in arr){
+            document.write(arr[i]+",");
+        }
+        document.write("<p>"+num3+"까지 3의 배수의 개수 : "+count+"</p>");
+    </script>
+</body>
+
+</html>
