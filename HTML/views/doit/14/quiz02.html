@@ -13,12 +13,18 @@
     <script>
         let count =0;
         let arr = new Array(count+1);
+        //let arr = [];
     </script>
 </head>
 
 <body>
     <h1>3의 배수 찾기</h1>
     <script>
+    //js는 사칙연산자 중에서 덧셈 연산자를 제외하고는 자료형에 구애받지 않는다.
+    //String 타입이더라도 계산이 된다. 다만 덧셈 연산은 String의 덧셈과 number의 연산은 다르다.
+    //String일 경우 나란히 더함
+    //number일 경우 값의 합을 구한다. 따라서 연산자 사용시 타입에 주의할 필요가 있다.
+
         //서로 다른 자료형이더라도 같으냐 라는 질문에 대답 가능
         //비교시엔 자료형을 맞춰주어야한다.
         var num3 = window.prompt("숫자를 입력하세요");
