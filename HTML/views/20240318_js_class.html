@@ -11,6 +11,7 @@
     <h1>class constructor 전단계</h1>
     <script>
         console.log("class constructor 전단계");
+        //함수를 활용하여 객체 생성
         function funcConstructor(age, name, score) {
             var obj = {
                 //콜론 앞 부분은 무조건 String으로 인식 해준다
@@ -27,6 +28,7 @@
         console.log(ej);
 
         console.log("?>>>>>생성자 객체");
+        //생성자를 이용하여 함수 선언
         function funcCon2(age, name, score) {
 
             this.age = age;
