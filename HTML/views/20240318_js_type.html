@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 보충</title>
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>자료형 - detail</h1>
+    <script>
+        var a1 = '문자\"열1';
+        console.log(a1);
+         a1 += "문자\'열1";
+         console.log(a1);
+         var result = a1.lastIndexOf('자');
+         console.log(a1);
+
+
+    </script>
+
+    <script>
+
+        var a1 = 0/0; //NaN 
+        console.log(a1+" : 0/0");
+        console.log(typeof(a1));
+        var a1 = 0/10; //0 -> number
+        console.log(a1+" : 0/10");
+        console.log(typeof(a1));
+        var a1 = 10/0; //Infinity
+        console.log(a1+": 10/0");
+        console.log(typeof(a1));
+        var a2 = a1+ a1;
+        console.log(a2+": a1+ a1"); //Infinity
+        console.log(typeof(a1));
+        var a2 = a1- a1;
+        console.log(a2+": a1- a1"); //NaN
+        console.log(typeof(a1));
+
+        var a1 = 100+"hello";
+        console.log(a1);
+        console.log(typeof(a1));
+        var a1 = 100-"hello";
+        console.log(a1);
+        console.log(typeof(a1));
+        var a1 = 100*"hello";
+        console.log(a1);
+        console.log(typeof(a1));
+        var a1 = 100/"hello";
+        console.log(a1);
+        console.log(typeof(a1));
+
+
+        console.log("--------------------------------- 강사님 깃확인하기");
+        var a2 = 10/0;     //infinity
+        console.log(a2);
+        console.log(typeof(a2));
+        console.log(">>>>isFinite : "+isFinite(a2));
+        console.log(">>>>isNaN : "+isNaN(a2));
+        
+
+        var a2 = a1-a1;     //NaN
+        console.log(a2);
+        console.log(">>>>isFinite : "+isFinite(a2));
+        console.log(">>>>isNaN : "+isNaN(a2));
+        var a2 = a1*a1;     //infinity
+        console.log(a2);
+
+        var a2 = a1/a1;     //NaN
+        console.log(a2);
+
+        //var c= prompt("number");
+        var c = "123";
+        console.log("입력값은 기본적으로 String이다. 강제형변환을 설정해두고 하는 것이 좋다.");
+        console.log(typeof(c)); //String
+        console.log(c*100); 
+        console.log(c+100); 
+        console.log(++c); 
+        console.log(c++); 
+        console.log(c); 
+        console.log(typeof(c)); 
+        c +=1;
+        console.log(c); 
+        console.log(typeof(c)); 
+
+
+    </script>
+
+</body >
+
+</html >
