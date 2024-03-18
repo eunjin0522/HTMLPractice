@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스의 생성자</title>
+</head>
+
+<body>
+    <h1>class constructor 전단계</h1>
+    <script>
+        console.log("class constructor 전단계");
+        function funcConstructor(age, name, score) {
+            var obj = {
+                //콜론 앞 부분은 무조건 String으로 인식 해준다
+                age: age,
+                name: name,
+                score: score
+            };
+            return obj;
+        };
+        let ej = funcConstructor(19, "hong", 98);
+        let jw = funcConstructor(24, "seo", 87);
+        console.log(ej.score);
+        console.log(jw.age);
+        console.log(ej);
+
+        console.log("?>>>>>생성자 객체");
+        function funcCon2(age, name, score) {
+
+            this.age = age;
+            this.name = name;
+            this.score = score;
+
+        };
+        let sh = new funcCon2(25,"park",99);
+        let km = new funcCon2(30,"gu",45);
+        console.log(sh.age);
+        console.log(km.name);
+        console.log(sh);
+
+    </script>
+</body>
+
+</html>
