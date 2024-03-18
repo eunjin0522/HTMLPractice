@@ -29,7 +29,7 @@
         //비교시엔 자료형을 맞춰주어야한다.
         var num3 = window.prompt("숫자를 입력하세요");
         num3 = Number.parseInt(num3);
-        for (var i = 1; i < num3 + 1; i++) {
+        for (var i = 1; i < num3 + 1; i++) {        //형변환을 해주지 않으면 num3이 3일 경우 num3+1 가 31이 된다. 
             if (i % 3 === 0) {
                 arr[count] =i;
                 count++;
