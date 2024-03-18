@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            console.log("f1 함수 실행");
+        }
+        //함수 실행
+        f1(); // return이 없기 때문에 굳이 변수에 담지 않아도 된다.
+
+        function f2( a1,a2,a3){
+            console.log("-----------arguments" + arguments);
+            console.log("f2 함수 실행");
+            console.log(a1);
+
+            if(typeof a3 == "undefined"){
+                console.log("a3 알아서 해줄게");
+                console.log("a3 "+a3);
+            }else{
+                console.log(a3);
+               if(typeof a3 == "funtion"){
+                    a3(); // 호출 -->  a3 is not a function
+               }
+            }
+        } 
+        f2(); //undefined
+        f2("abc"); //abc
+        f2(10,20); 
+        //정신 안 차릴래 f2(10,20,"abc", 30);//30 안들어감  -> 앞부분에 전달된 파라미터값만 들어간다. 뒤에 있는 건 버려짐, 에러 안 남
+
+        console.log("함수를 매개변수로 넣음")
+       f2(10,20,function(){
+        console.log("익명함수 - 3번째 매개인자로 전달됨")
+       });
+
+       //오류 코드 f2(70,20,90); 
+
+       //객체
+       console.log(">>>>> object")
+       var obj = {};
+       obj["k1"] = "v1";
+       obj.k2 ="v2";
+       obj.k3 = 123;
+       obj["k4"] = true;
+       obj.k5 = "k5 입니다.";
+       
+       console.log(obj);
+       console.log("k3 : "+obj.k3+10);
+       console.log("k3 : "+(obj.k3+10));
+       console.log("k4 : "+obj.k4);
+
+       //배열
+       console.log(">>>>> Array")
+       var arr = [];
+       arr.push(123);
+       arr.push("this is last one");
+       arr.push("ABC");
+       arr.push({"r1" : "a","r2" : "b"});
+       //2번 index에 삭제 없이 123추가
+       arr.splice([2],0,123);
+       console.log(arr);
+
+       console.log("값의 인덱스 : "+arr.indexOf(123));
+       console.log("정렬");
+       console.log(arr.sort());
+       
+
+    </script>
+</body>
+</html>
