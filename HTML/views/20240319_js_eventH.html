@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM,BOM</title>
+</head>
+
+<body>
+    <button type="button" id="btn1">버튼1</button>
+    <button type="button" id="btn2">버튼2</button>
+
+    <!-- id와 이벤트등록 방식을 함께 사용하지 않는다. 혼선을 준다. -->
+    <button type="button" id="btn3" onclick="cbF3();console.log('이것도')">버튼3</button>
+
+    <form method="get" action="#" id="form-test">
+        <input type="text" name="n1">
+        <button type="submit" onclick="return cbF3()">전달</button>
+        <!-- form-test에서 고전방식 / chF3() 에서 인라인 방식 함수가 나타난다.  -->
+        <!-- 일부러 두 개 걸기도 함 submit과 onclick은 함께걸기도 함-->
+    </form>
+
+    <button type="button" id="btn-add">추가</button>
+    <table border="1">
+        <thead>
+            <tr id="tbl_col">
+                <td style="color: red;">title1</td>
+                <td>title2</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <!-- BOM DOM -->
+    <script>
+        let count = 1;
+        var cbf4 = function () {
+            console.log("정상동작하네요");
+            // 방법1
+            var htmlValue = '';
+            htmlValue += '<tr>';
+            htmlValue += '    <td>'+count+'</td>';
+            htmlValue += '    <td>col name'+count+'</td>';
+            htmlValue += '</tr>';
+            
+            var temp = document.getElementsByTagName("tbody")[0].innerHTML += htmlValue; //getter 개념 
+            document.getElementsByTagName("tbody")[0].innerHTML = temp + htmlValue; //setter개념
+
+            //방법2 -추가할 때마다 추가됨
+            // var nodeTr = document.createElement("tr");
+            // var nodeTd = document.createElement("td");
+            // var nodeTdT = document.createElement("td");
+            // var nodeText1 = document.createTextNode(count);
+            // var nodeText2 = document.createTextNode("col name"+count);
+
+            // nodeTd.appendChild(nodeText1);
+            // nodeTdT.appendChild(nodeText2);
+            // nodeTr.appendChild(nodeTd);
+            // nodeTr.appendChild(nodeTdT);
+
+            // document.getElementsByTagName("tbody")[0].appendChild(nodeTr);
+            count ++;
+        };
+        document.getElementById("btn-add").addEventListener("click", cbf4);
+
+
+    </script>
+
+    <!-- event handler  -->
+    <script>
+        //함수를 변수에 담을 땐 
+        var cbF1 = function () {
+            console.log("고전방식: 이벤트 발생하여 callback함수가 호출될수 있도록 ()붙여주고..");
+        };
+        var cbF2 = function () {
+            console.log("표준방식: 이벤트 발생하여 callback함수가 호출될수 있도록 ()붙여주고...");
+        };
+        var cbF3 = function () {
+            console.log("인라인방식: 이벤트 발생하면 따옴표 안의 내용을 그대로 실행");
+            return true;
+        };
+        var frmEle = document.getElementById("form-test");
+        frmEle.onsubmit = cbF1;
+        // onsubmit은 form태그에 주로 걸어준다.
+
+        var btn1Elem = document.getElementById("btn1");
+        btn1Elem.onclick = cbF1;
+
+        var btn2Elem = document.getElementById("btn2");
+        btn2Elem.addEventListener("click", cbF2);
+
+        var btn3Elem = document.getElementById("btn3");
+        btn3Elem.onclick = cbF1; //고전은 사라진다
+        btn3Elem.onclick = cbF2; //cbF1위에 cbF2가 덮여진다.  //이렇게 하지 마세요
+        //순서는 인라인이 우선된다.
+        //인라인과 고전방식은 사실상 동일하다 (위치에 따라 달라질 수 있다)
+        btn3Elem.addEventListener("click", cbF3);
+
+        //
+        // var btn3Elem = document.getElementById("btn3");
+
+    </script>
+</body>
+
+</html>

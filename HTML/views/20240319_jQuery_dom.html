@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 이곳에 코딩하면 안됩니다. -->
+    <title>jquery</title>
+    <!-- jQuery js 파일은 상단에 위치 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <button type="button" id="btn-add">추가</button>
+    <table border="1">
+        <thead>
+            <tr id="tbl_col">
+                <td style="color: red;">title1</td>
+                <td>title2</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>33</td>>
+            </tr>
+
+        </tbody>
+    </table>
+  
+    <script>
+
+        //동일한 기능 수행
+        $("tr").eq(0);
+        //var a =document.getElementsByTagName("tr")[0];
+
+        console.log($("tr").first()); // get -> jquery를 DOM으로 바꿔주는 것
+        console.log($("tr").last()); // get -> jquery를 DOM으로 바꿔주는 것
+        console.log(document.getElementsByTagName("tr"));
+        console.log(document.getElementsByTagName("tr")[document.getElementsByTagName("tr").length - 1]);
+
+    </script>
+    <script>
+        var func = function (a1, a2) {
+            console.log("함수실행");
+            console.log(a1); //index
+            console.log(a2); //index value
+        }
+        var arr = [10, 20, 30, 40];
+        var obj = { k1: 10, k2: 20, k3: 30, k4: "ABC" };
+        $.each(arr, func);
+        console.log(".........................");
+        $.each(obj, func);
+        console.log("........호로로롤..........");
+        $("td").each(func);
+
+
+        let count = 1;
+        var cbf4 = function () {
+            console.log("정상동작하네요");
+            // 방법1
+            var htmlValue = '';
+            htmlValue += '<tr>';
+            htmlValue += '    <td>' + count + '</td>';
+            htmlValue += '    <td>col name' + count + '</td>';
+            htmlValue += '</tr>';
+            var temp = $("tbody").eq(0).html();
+            $("td:nth-of-type(0)").css("color", "blue");
+            // var temp = $("tbody").eq[0].html(); //아래 temp와 동일 getter
+            // $("tbody").eq[0].html(temp+hmlValue); //setter 
+
+            // var temp = document.getElementsByTagName("tbody")[0].innerHTML += htmlValue; //getter 개념 
+            // document.getElementsByTagName("tbody")[0].innerHTML = temp + htmlValue; //setter개념
+
+            //방법2 -DOM , 잘 사용 안 함
+            //createElement를 잘 사용하지 않음
+            // var nodeTr = '<tr>';
+            // var nodeTd = '    <td>' + count + '</td>';
+            // var nodeTdT = '    <td>col name' + count + '</td>';
+            // $("tbody").append(nodeTr);
+            // $("tr").append(nodeTd);
+            // $("tr").append(nodeTdT);
+            // document.getElementsByTagName("tbody")[0].appendChild(nodeTr);
+
+            // var nodeText1 = document.createTextNode(count);
+            // var nodeText2 = document.createTextNode("col name"+count);
+            // nodeTd.setAttribute
+
+            // nodeTd.appendChild(nodeText1);
+            // nodeTdT.appendChild(nodeText2);
+            // nodeTr.appendChild(nodeTd);
+            // nodeTr.appendChild(nodeTdT);
+
+            // document.getElementsByTagName("tbody")[0].appendChild(nodeTr);
+            count++;
+        };
+        document.getElementById("btn-add").addEventListener("click", cbf4);
+
+
+    </script>
+    <!-- js파일은 대부분 하단에 위치 -->
+</body>
+
+</html>

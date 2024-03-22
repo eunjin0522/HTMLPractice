@@ -20,8 +20,8 @@
         console.log(a1);
          a1 += "문자\'열1";
          console.log(a1);
-         var result = a1.lastIndexOf('자');
-         console.log(a1);
+         var result = a1.lastIndexOf('자'); //indexof처럼 해당 문자(마지막순번)의 인덱스 번호를 알려준다
+         console.log(result);
 
 
     </script>
@@ -30,35 +30,35 @@
 
         var a1 = 0/0; //NaN 
         console.log(a1+" : 0/0");
-        console.log(typeof(a1));
+        console.log(typeof(a1));    //number
         var a1 = 0/10; //0 -> number
         console.log(a1+" : 0/10");
         console.log(typeof(a1));
         var a1 = 10/0; //Infinity
         console.log(a1+": 10/0");
-        console.log(typeof(a1));
+        console.log(typeof(a1));    //number
         var a2 = a1+ a1;
         console.log(a2+": a1+ a1"); //Infinity
-        console.log(typeof(a1));
+        console.log(typeof(a2));
         var a2 = a1- a1;
         console.log(a2+": a1- a1"); //NaN
-        console.log(typeof(a1));
+        console.log(typeof(a2));
 
         var a1 = 100+"hello";
-        console.log(a1);
-        console.log(typeof(a1));
+        console.log(a1);            //100hello
+        console.log(typeof(a1));    //String
         var a1 = 100-"hello";
-        console.log(a1);
-        console.log(typeof(a1));
+        console.log(a1);            //NaN
+        console.log(typeof(a1));    //number
         var a1 = 100*"hello";
-        console.log(a1);
-        console.log(typeof(a1));
+        console.log(a1);            //NaN
+        console.log(typeof(a1));    //number
         var a1 = 100/"hello";
-        console.log(a1);
-        console.log(typeof(a1));
+        console.log(a1);            //NaN
+        console.log(typeof(a1));    //number
 
 
-        console.log("--------------------------------- 강사님 깃확인하기");
+        console.log("---------------------------------");
         var a2 = 10/0;     //infinity
         console.log(a2);
         console.log(typeof(a2));

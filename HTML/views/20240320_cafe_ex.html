@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(loadHandler);
+
+            function loadHandler(){
+                console.log("여긴 해더");
+                var elem =$("td");
+            console.log(elem);
+
+        };
+
+    </script>
+</head>
+
+<body>
+
+    <script>
+        // window.onload=function(){
+             var elem =$("td");
+             console.log("load event");
+             console.log(elem);
+        // };
+         //로드가 끝난 후 실행되는 이벤트(코드 다 읽고 화면에 출력된 후!)
+        //document.getElementById("").onclick = function(){};
+        var elem =$("td");
+        console.log(elem);
+        console.log("그냥 여기");
+    </script>
+
+
+    <h1>JS Table</h1>
+    <form action="">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>menu</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>합계</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>아메리카노</td>
+                <td id="ame">2500 </td>
+                <td > <input type="text" id="americano">
+                </td>
+                <td></td>
+            </tr>
+<script>
+           var elem =$("td");
+        console.log(elem);
+        console.log("body");
+</script>
+            <tr>
+                <td>라떼</td>
+                <td id="latte">3000</td>
+                <td><input type="text" id="n1"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>생강라뗴</td>
+                <td id="lala">4500</td>
+                <td><input type="text" id="n2"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>딸기바나나</td>
+                <td id="ba">4500</td>
+                <td><input type="text" id="n3"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>합계</td>
+                <td><input type="text" id="result"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> <button type="button" class="calc">계산하기</button>
+                    <input type="reset" value="초기화">
+                </td>
+            </tr>
+
+        </tbody>
+
+
+    </table>
+</form>
+<script>
+           var elem =$("td");
+        console.log(elem);
+        console.log("end");
+</script>
+<script>
+    // var num = document.getElementById("americano");
+    // resultA = num*2500;
+    // console.log(resultA);
+    // $("input").val(); //값을 읽어준다.
+    // var cal = function(num, price){
+    //     sum = num*price;
+    //     return sum;
+    // }
+
+</script>
+</body>
+
+</html>

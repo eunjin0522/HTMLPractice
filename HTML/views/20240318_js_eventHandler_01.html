@@ -12,12 +12,12 @@
     <button type="button" id="event1">버튼1</button>
     <button type="button" id="event2">버튼2</button>
 
-    <!-- 인라인 이벤트 모델 / ()(); 익명함수에 넣어서 함수 설정 -->
+    <!-- 인라인 이벤트 모델 / ()(); 스스로동작함수에 넣어서 함수 설정 -->
     <button type="button" id="event3" onclick="(function(){console.log('인라인 방식 : 인라인 방식으로 호출되었습니다.');})();">버튼3</button>
     <button type="button" id="event3" onclick="cbF1();">버튼4</button>
     <!-- html의 요소 중 onclick으로 설정 한 것 : onclick 인지까지 가능 function내의 내용은 script에서 -->
     
-    
+
     <!-- js는 인터프리터 언어(한줄씩 실행)이므로 <button>이 먼저 선언되어 있어야한다.  -->
     <script>
         //인라인 이벤트 모델
@@ -49,8 +49,13 @@
         var cbF1 = function(){
             console.log("인라인방식 : 이벤트가 발생하면 따옴표 안의 내용을 그대로 실행");
         };
+
+        //이런경우는 둘 다 실행되거나 하나만 실행되기도 한다. 이렇게 하지 마세요
         var btn3 = document.getElementById("event3");
-        btn3.onclick = cbF1;
+        btn3.addEventListener("click",cbF2);
+
+        var btn3 = document.getElementById("event3");
+        btn3.addEventListener("click",cbF1);
     </script>
 
 </body>
