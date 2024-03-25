@@ -31,12 +31,12 @@
         //생성자를 이용하여 함수 선언
         function funcCon2(age, name, score) {
 
-            this.age = age;
+           this.age = age;
             this.name = name;
             this.score = score;
 
         };
-        let sh = new funcCon2(25,"park",99);
+        let sh = new funcCon2(25,"park",99);//객체로 선언 되려면 this.age = age; 처럼 this를 적어줘야함
         let km = new funcCon2(30,"gu",45);
         console.log(sh.age);
         console.log(km.name);

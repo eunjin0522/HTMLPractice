@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>첫 자바 스크립트</title>
     <script>
-        //디버깅 용도로 많이 쓰임 - inline 방식
-        document.write("Hello It's me");
-        document.write("I just wondering");
-        document.write(".. from  Adele");
+        //디버깅 용도로 많이 쓰임 - inline 방식 : 나란히 출력됨 link span
+        //document.write("Hello It's me");
+        //document.write("I just wondering");
+        //document.write(".. from  Adele");
 
         //화면이 공백이 된 상태에서 경고문구 창이 나타남
         // window.alert("경고문구 ");
@@ -20,15 +20,18 @@
 
 <body>
     <h1 id="id2">javascript first</h1>
+    <h3 id="id100">javascript first</h3>
     <h1 class="c2">javascript second</h1>
     <h1 class="c2">javascript third</h1>
+    <h5 class="c2">javascript third</h5>
 
 
     <script>
-    //     window.alert("window객체의 alert라는 함수/메소드 호출");
-    //    alert("window객체명을 생략하고 접근할 수 있다");
-       window.document.getElementById("id2");
-       console.log(typeof(window));
+        //     window.alert("window객체의 alert라는 함수/메소드 호출");
+        //    alert("window객체명을 생략하고 접근할 수 있다");
+        window.document.getElementById("id2");
+        document.getElementById("id100").innerHTML = "이순신";
+        console.log(typeof (window));
 
         // boolean
         var a8 = true;
@@ -51,13 +54,14 @@
         var a13 = {
             k1: 123, name: "hong", gender: "f"
             , score: { kor: 100, math: 95, eng: 85 }
-            , a16 : function () {
-            console.log("***** a16 ******");
-            console.log("function형태의 변수 선언1");
-            console.log("변수명이 function이다");
-            console.log("자바와 동일한 위치에 함수명이 있습니다.");
-            return a10;
-        }
+            , a16: function () {
+                console.log("***** a16 ******");
+                var az = "이것도 나와?"; //안 나와
+                console.log("function형태의 변수 선언1");
+                console.log("변수명이 function이다");
+                console.log("자바와 동일한 위치에 함수명이 있습니다.");
+                return a10;
+            }
         };
         console.log(a13);
         console.log(a13.k1);
@@ -65,17 +69,20 @@
         console.log(a13.score.eng);
 
         console.log(a13.a16); //안의 값이 무엇이냐, 값을 보여달라
-        console.log(a13.a16()); //값과 실행결과를 나타냄
+        console.log(a13.a16()); //값과 실행결과를 나타냄 return값 우리가 쓸 수 있는 값
 
         //undefined - 선언만 했을 때
         var a12;
-        console.log(typeof a12);
+        console.log(typeof a12); //undefined
         a12 = "값을 넣음으로써 a12의 자료형이 바뀜";
-        console.log(typeof a12);
+        console.log(typeof a12); //String
+
+        //undefined : 바구니 조차 없음
+        //null : 바구니만 선언됨
 
         //function
         //a13은 함수이다
-        //함수 정이\ㅢ
+        //함수 정의
         var a13 = function () {
             console.log("***** a13 ******");
             console.log("function형태의 변수 선언1");
@@ -83,7 +90,7 @@
             console.log("function형태의 변수 선언3");
             console.log(123 * 2);
         };
-        console.log(typeof a13);
+        console.log(typeof a13); //function
         console.log(a13);
         // 함수 실행
         a13();
@@ -94,10 +101,11 @@
             console.log("자바와 동일한 위치에 함수명이 있습니다.");
             return a10;
         };
+        console.log("+++");
         a14();
         var a15 = a14();
-        
-        console.log(">>>>>>>>>>a15"+typeof(a15));
+
+        console.log(">>>>>>>>>>a15" + typeof (a15)); // return값에 맞춰서 함수의 타입이 정해짐
         console.log(a15);
 
 
@@ -106,11 +114,12 @@
         console.log(a3);
         var a4 = document.getElementsByClassName("c2");
         console.log(a4);
+        console.log(typeof a4);
 
         var a5 = document.getElementsByTagName("h1");
         console.log(a5);
 
-        // select를 통해서 찾아줘 - 첫번째만 
+        // select를 통해서 찾아줘 - .c2와  일치하는 문서 내 첫번째 Element반환 
         var a6 = document.querySelector(".c2");
         console.log(a6);
         // 모두를 찾아줘
@@ -136,9 +145,9 @@
     </script>
     <script>
         var a1 = window.prompt("진입할 곳의 이름을 작성해주세요");
-        // 입력한 문자
-        // document.getElementsByTagName("h1")[2].innerHTML = a1;
-        // console.log(a1 );
+       // 입력한 문자
+        document.getElementsByTagName("h1")[2].innerHTML = a1;
+        console.log(a1 );
 
         // var a2=window.confirm("계속 진행하겠습니까?");
         // console.log(a2);

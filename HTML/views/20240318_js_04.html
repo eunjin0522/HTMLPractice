@@ -13,12 +13,13 @@
     <script>
         var a1 = true;
         var a2 = 1;
-        console.log((a1 == a2) ? "==같다" : "==다르다");
+        console.log((a1 == a2) ? "==같다" : "==다르다"); //==같다
+        console.log((a1 === a2) ? "===같다" : "===다르다"); //===다르다
         a2 = "aaa";
-        var a3;
+        var a3; //전역변수라 undefined로 되었이다. a3에 값 들어갈 때까지 undefined
 
         if ("") {
-            console.log("a2가 true임")
+            console.log("a2가 true임");//조건식에 a2를 넣으면 true가 된다.
             console.log("String, 음수, 양수, 실수 => true")
         } else {
             console.log("a2값이 0인 경우 false")
@@ -33,24 +34,25 @@
         };
         console.log(arr);
         console.log(obj);
-        console.log("배열 : "+arr + ":문자와함께작성하면");
-        console.log("객체 : "+obj + ":문자와함께작성하면");
+        console.log("배열 : "+arr + ":문자와함께작성하면");//배열 : apple,banana:문자와함께작성하면
+        console.log("객체 : "+obj + ":문자와함께작성하면");//객체 : [object Object]:문자와함께작성하면
 
         console.log("-----------------array");
         var a4 = [];     //대괄호 = 배열선언//배열이라는 자료형을  사용하겠다 못박는 것 
                         //[]를 선언하지 않으면 할 수가 없음
-        console.log(a4);
-        console.log(typeof (a4));
+        console.log(a4); //[]
+        console.log(typeof (a4));//object
         a4.push("a");
-        console.log(a4);
+        console.log(a4); //['a']
         a4[2] = "b";
-        console.log(a4);
+        console.log(a4);//(3) ['a', empty, 'b']
 
         var a4 = {};  //중괄호 = 객체선언
-        console.log(typeof (a4));
+        console.log(typeof (a4));//object
         a4.k1 = "v1"; //방법1
         a4["k2"] = "v2"; //방법2
-        console.log(a4);
+
+        console.log(a4);//{k1: 'v1', k2: 'v2'}
 
         for(var key in a4){
             console.log("방법2 : "+a4[key]); // 방법2만 가능, 방법1은 불가능

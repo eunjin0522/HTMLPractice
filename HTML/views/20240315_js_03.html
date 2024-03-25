@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,15 @@
     <script>
         var a1 = 10.23;
         var a2 = "10.23";
-        console.log((a1 == a2) ? "==same" : "== nobbb")
-        console.log((a1 === a2) ? "===same" : "=== nobbb")
+        console.log((a1 == a2) ? "==same" : "== nobbb"); //==same 우리 눈에 보이는 그것만 같으면 됨
+        console.log((a1 === a2) ? "===same" : "=== nobbb"); //=== nobbb자료형도 같아야한다
 
+        var c1 = 10+20; //30
+        var c2 ="10+20"; //10+20
+        var c3 = 30; // 30
+        console.log((c1 == c2) ? "c==same" : "c== nobbb"); //c== nobbb
+        console.log((c1 == c3) ? "cc==same" : "cc== nobbb"); //cc==same
+        console.log((c1 === c2) ? "c===same" : "c=== nobbb");//c=== nobbb
 
     </script>
 
@@ -24,10 +30,6 @@
 
         var sum;
         console.log(">>>>>>1번 i")
-        for (var i = 0; i < 10; i++) {
-            console.log(i);
-        }
-        console.log(">>>>>>2번 i")
         for (var i = 0; i < 10; i++) {
             console.log(i);
         }

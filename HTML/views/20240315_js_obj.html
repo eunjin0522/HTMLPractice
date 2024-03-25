@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>obj와 var</title>
     <script>
+        console.log("aa");
         //var 선언 없이 바로 함수라 선언되어 있어서 그 내용도 다 선언되어있다
+        //var a4;
         function f1() { //f1도 수많은 window의 함수중 하나가 됨
-            var a3 = 3; //지역변수
-            a4 = 4; //전역변수 
+                        //head의 script에 있기 때문에 script에 들어오자마자 함수가 선언되어 있다.
+                        //만약 f1 = function으로 되어 있으면 not acailable로 되어있고 이후 f1을 지나야 함수란 걸 인식한다.
+            var a3 = 3; //지역변수 - 함수 f1 안에 있을 때만 얘가 뭔지 알 수 있다.
+            a4 = 4; //전역변수  - 얘를 호출하기 전 까진 not available
+                    //밖에 var a4로 선언해두면 undefined로 됨
             console.log("--------- 3 ---------");
-            console.log("--------- 3 --------- 1 " + a1);
-            console.log("--------- 3 --------- 2 " + a2);
+            //console.log("--------- 3 --------- 1 " + a1);
+            //console.log("--------- 3 --------- 2 " + a2);
             console.log("--------- 3 --------- 3 " + a3);
             console.log("--------- 3 --------- a4 " + a4);
 
@@ -26,14 +31,15 @@
 <body>
     <h1>object</h1>
     <h1 id="id2">javascript first</h1>
-    <h1 class="c2">javascript second</h1>
+    <h1 class="c2" >javascript second</h1>
     <h1 class="c2">javascript third</h1>
-    <script>
-        function sayHello() {
+    <script>// function sayHello으로 하면 여길 지나는 순간 함수 인식
+        console.log(f1());
+        function sayHello () {
             let greeting = "hello"
             return greeting
         }
-        console.log(sayHello());
+        console.log(sayHello()); //sayHello=function으로 하면 여기서 함수가 인식이 됨 그 전까진 not available
         console.log(sayHello);
 
 
