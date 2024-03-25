@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
     <title>회원가입</title>
     <style>
         .wrap {
@@ -43,11 +45,32 @@
                     <td><input type="text" name="id" required>
                     <a href="index.html">중복확인</a></td>
                 </tr>
+
                 <tr>
                     <th>비밀번호</th>
-                    <td><input type="password" name="pw" required>
+                    <td><input class="pw" type="password" name="pw" required>
                     <span> 6자 이상</span></td>
                 </tr>
+
+                <script>
+                    $(".pw").on("blur",pwcheck);
+                    function pwcheck(){
+                        var pwLength = $(this).val().trim().length;
+                        var pw = $(this).val();
+                        const regex = /^[A-Z](?=.*[A-Za-z])(?=.*\d)[_]?[A-Za-z\d_]{5,11}$/;
+
+                        let test = regex.test(pw);
+                        if(pwLength<1){
+                            alert("조건에 맞게 입력해주세요");
+                            
+                        }else if(!test){
+                            alert("조건에 맞게 입력해주세요!");
+                            $(".pw").empty();
+                        }
+                    }
+
+                </script>
+
                 <tr>
                     <th>비밀번호 확인</th>
                     <td><input type="password" name="pwcheck"></td>
