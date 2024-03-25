@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 700px;
+            margin: 0 auto;
+
+        }
+        .form_wrap{
+            text-align: center;
+        }
+        .layout{
+            border-bottom: 1px solid red;
+            border-top: 1px solid red;
+            text-align: start;
+        }
+
+        th {
+            width: 25%;
+        }
+
+        td {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="wrap">
+        <form action="index.html" method="get" class="form_wrap">
+            <table class="layout">
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <th>아이디</th>
+                    <td><input type="text" name="id" required>
+                    <a href="index.html">중복확인</a></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" name="pw" required>
+                    <span> 6자 이상</span></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td><input type="password" name="pwcheck"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 힌트/답변</th>
+                    <td>
+                        <select name="hint" id="hint">
+                            <option value="">선택하세요</option>
+                            <option value="30">졸업한 초등학교 이름은?</option>
+                            <option value="31">제일 친한 친구의 핸드폰 번호는?</option>
+                            <option value="32">아버지 성함은? </option>
+                            <option value="33">어머니 성함은?</option>
+                            <option value="34">어릴 적 내 별명은?</option>
+                            <option value="35">가장 아끼는 물건은?</option>
+                            <option value="36">좋아하는 동물은?</option>
+                            <option value="37">좋아하는 색깔은?</option>
+                            <option value="38"></option>
+                        </select>
+                        </td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <th>전화번호</th>
+                    <td><input type="text" name="number"></td>
+                </tr>
+                <tr>
+                    <th>메일/sns정보 수신</th>
+                    <td>
+                        <span><input type="radio" id="pushYes" name="push" value="pushYes" checked="checked">
+                            <label for="pushYes">수신</label></span>
+                        <span><input id="pushNo" type="radio" name="push" value="pushNo"> <label for="pushNo">수신거부</label></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>관심분야</th>
+                    <td>
+                        <span><input type="checkbox" name="interests" value="v1">생두</span>
+                        <span><input type="checkbox" name="interests" value="v2">원두</span>
+                        <span><input type="checkbox" name="interests" value="v3">로스팅</span>
+                        <span><input type="checkbox" name="interests" value="v4">핸드드립</span>
+                        <span><input type="checkbox" name="interests" value="v5">에스프레소</span>
+                        <span><input type="checkbox" name="interests" value="v6">창업</span>
+                    </td>
+                </tr>
+            </table>
+            <span><button type="submit">회원가입</button></span>
+            <span><button type="reset">초기화</button></span>
+        </form>
+
+    </section>
+</body>
+</html>
