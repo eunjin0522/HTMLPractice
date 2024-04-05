@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("document");
+        // alert("alert haha"); 확인
+        // prompt("write page","here"); 확인 취소, 입력칸
+        // confirm("msg"); 확인, 취소
+
+        var name = prompt("name");
+        document.write("<span><br>" + name + "</span>님 안녕하세요");
+
+        // if문
+        var userNumber = prompt("숫자 입력");
+        if (userNumber !== null) { //null = 취소
+            if (userNumber % 3 === 0) {
+                alert("3배수");
+            } else {
+                alert("nope");
+            }
+        }else{
+
+            alert("null ");
+        }
+        var changeWord = document.getElementsByClassName("title").innerHTML="<h1>이걸로바귑니다.</h1>";
+        var changeWord1 = document.getElementsByClassName("title").innerText="이걸로바귑니다.";
+        document.write(changeWord);
+        document.write(changeWord1);
+    </script>
+</body>
+<h1 class="title">이것은 제목입니다.</h1>
+
+</html>

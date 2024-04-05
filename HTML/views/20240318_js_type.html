@@ -17,11 +17,11 @@
     <h1>자료형 - detail</h1>
     <script>
         var a1 = '문자\"열1';
-        console.log(a1);
+        console.log(a1); //문자"열1
          a1 += "문자\'열1";
-         console.log(a1);
-         var result = a1.lastIndexOf('자'); //indexof처럼 해당 문자(마지막순번)의 인덱스 번호를 알려준다
-         console.log(result);
+         console.log(a1); //문자"열1문자'열1
+         var result = a1.lastIndexOf('자'); //  indexof처럼 해당 문자(마지막순번)의 인덱스 번호를 알려준다
+         console.log(result);//6
 
 
     </script>
@@ -39,10 +39,11 @@
         console.log(typeof(a1));    //number
         var a2 = a1+ a1;
         console.log(a2+": a1+ a1"); //Infinity
-        console.log(typeof(a2));
+        console.log(typeof(a2));//number
         var a2 = a1- a1;
+        console.log(a2); //NaN
         console.log(a2+": a1- a1"); //NaN
-        console.log(typeof(a2));
+        console.log(typeof(a2)); //number
 
         var a1 = 100+"hello";
         console.log(a1);            //100hello
@@ -62,15 +63,15 @@
         var a2 = 10/0;     //infinity
         console.log(a2);
         console.log(typeof(a2));
-        console.log(">>>>isFinite : "+isFinite(a2));
-        console.log(">>>>isNaN : "+isNaN(a2));
+        console.log(">>>>isFinite : "+isFinite(a2)); //false
+        console.log(">>>>isNaN : "+isNaN(a2)); //false
         
 
         var a2 = a1-a1;     //NaN
         console.log(a2);
-        console.log(">>>>isFinite : "+isFinite(a2));
-        console.log(">>>>isNaN : "+isNaN(a2));
-        var a2 = a1*a1;     //infinity
+        console.log(">>>>isFinite : "+isFinite(a2)); //false
+        console.log(">>>>isNaN : "+isNaN(a2)); //true
+        var a2 = a1*a1;     //NaN
         console.log(a2);
 
         var a2 = a1/a1;     //NaN

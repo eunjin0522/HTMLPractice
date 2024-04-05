@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카페 계산기</title>
     <script>
-        prompt("이왜진");
-        confirm("이건??");
-        alert("이건 알지 경고창");
+        // prompt("이왜진");
+        // confirm("이건??");
+        // alert("이건 알지 경고창");
     </script>
+    <style>
+        tr {
+            width: 1fr;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <form>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>메뉴</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                    <th>합계</th>
+                </tr>
+            </thead>
+
+            <body>
+                <tr>
+                    <td>아메리카노</td>
+                    <td>2500</td>
+                    <td><input type="text" name="americano"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>라떼</td>
+                    <td>3000</td>
+                    <td><input type="text" name="latte"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>생강라떼</td>
+                    <td>4500</td>
+                    <td><input type="text" name="ginger"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>딸기바나나라떼</td>
+                    <td>4500</td>
+                    <td><input type="text" name="banana"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>합계</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <button>계산하기</button>
+                        <button type="reset">초기화</button>
+                    </td>
+                </tr>
+            </body>
+        </table>
+    </form>
+
 </body>
+
 </html>

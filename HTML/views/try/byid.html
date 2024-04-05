@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function changeColor(newColor) {
-            var elem = document.getElementById("cc");
-            elem.style.color = newColor;
+    <style>
+        .size {
+            margin-bottom: 10px;
         }
-    </script>
+
+        ul {
+            text-align: center; /* '작성하기' 버튼을 가운데 정렬하기 위한 스타일 */
+        }
+    </style>
 </head>
-
 <body>
-    <p id="cc">글자색 바꾸기</p>
-    <button onclick="changeColor('blue');">blue</button>
-    <button onclick="changeColor('red');">red</button>
-
+<div class="content-wrap">
+    <section>
+        <form action="insert.no">
+            <fieldset>
+                <legend>공지사항 작성하기</legend>
+                <ul>
+                    <li class="size">
+                        <label for="title">제목</label>
+                        <input type="text" id="title" name="title" placeholder="제목을 입력하세요" required>
+                    </li>
+                    <li class="size">
+                        <label for="content">내용</label>
+                        <textarea type="text" id="content" name="content" placeholder="내용을 입력하세요" cols="40" rows="4"
+                                  required></textarea>
+                    </li>
+                    <li class="size">
+                        <label for="input-file">첨부파일</label>
+                        <input type="file" name="uploadFile" id="input-file">
+                    </li>
+                    <li>
+                        <input type="submit" value="작성하기">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </section>
+</div>
 </body>
-
 </html>

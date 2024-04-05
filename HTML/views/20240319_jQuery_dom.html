@@ -61,7 +61,7 @@
         $("td").each(func);
 
 
-        let count = 1;
+        let count = 4;
         function cbf4() {
             console.log("정상동작하네요");
             // 방법1
@@ -73,8 +73,8 @@
             // 매개인자에 따라 다르게 기능시킬 수 있는  js 특성
             var temp = $("tbody").eq(0).html();
             $("tbody").eq(0).html(temp+htmlValue);
-            if($("tbody > tr>td:last-of-type")%2==0){
-                $("tr>td:first-of-type").css("color", "blue");
+            if($("tbody > tr > td:last-of-type").length%2==0){ //"tbody > tr > td:last-of-type" 자체는 td이다
+                $("tr > td:first-of-type").css("color", "blue");
             }else{
                 $("tr > td:first-of-type").css("color", "red");
             }

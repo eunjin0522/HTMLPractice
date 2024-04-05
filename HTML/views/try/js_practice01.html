@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // document.write("안녕"); // 나란히 뿌려짐
+        // document.write("하세요!");
+        // window.alert("경고문구"); // 확인만
+        // prompt("입력값","기본값");
+        // confirm("확인?"); //확인, 취소
+
+    </script>
+</head>
+<body>
+    <h1 id="id2">JavaScript 처음</h1>
+    <h1 class="c2">JavaScript 처음2</h1>
+    <h1 class="c2">JavaScript 처음3</h1>
+    <p id="result">kakaka</p>
+    <p >kakaka</p>
+    <script>
+       document.getElementById("result").innerHTML=''; //id=result의 내부문자 제거
+       var a = {K1 :1, k2:"s"};
+       console.log(a);
+       a.k3 = "a15에 새로 key k3 생성하고 값";
+        a.k2 = "a15에 기존 key k2에 값 바꿈";
+        console.log(a);
+
+        a16 = "a16은 앞에 window. 생략. 즉 window에 기존key a16이 없다면 생성, 있었다면 값 바꿈";
+        console.log(a16);
+        console.log("---------------");
+
+        var a8 ;// true // 223.23 //"sdf" // null(object)
+        console.log(typeof(a8));  // undefined 선언만,값없으면
+        //undefined : 바구니 조차 없음
+        //null : 바구니만 선언됨
+    </script>
+</body>
+</html>

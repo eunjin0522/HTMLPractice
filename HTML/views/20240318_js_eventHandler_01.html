@@ -22,7 +22,7 @@
     <script>
         //인라인 이벤트 모델
         var btn1 = document.getElementById("event1");//<button>이 선언되어 있지 않으면 Null값이 뜬다.
-        console.log(btn1);
+        console.log(btn1);//<button type="button" id="event1">버튼1</button>
         console.log(typeof (btn1)); //object
 
         btn1.onclick =cbF1;//onclick이 일어나면 이 함수를 실행해줘 
@@ -37,13 +37,15 @@
         });
 
         //addEventHandler(event명, callbackjunction){}
+        var btn2 = document.getElementById("event2");
+        btn2.addEventListener("click",cbF2);
         function f1(a1, a2, a3) {
             if (a1 == "click") {
                 console.log("클릭이 되어 다음 코드가 실행됨")
             }
         }
 
-        var cbF2 = function(){
+       function cbF2(){
             console.log("표준방식 : 이벤스 발생하여 callback 함수가 호출될 수 있도록");
         };
         var cbF1 = function(){
