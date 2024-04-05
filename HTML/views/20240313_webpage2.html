@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap"
         rel="stylesheet">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -42,7 +44,25 @@
         </header>
     </div>
     <div class="wrap-main">
-        <section>
+        <section class="section">
+            <!-- 모달 만들기 -->
+            <article>
+                <h1>모달</h1>
+                <button type="button" class="btn modal">
+                    <img src="../images/savings_black_24dp.svg" alt="??">
+                    <span>모달</span>
+                    <span>띄우기</span>
+                </button>
+                <div class="wrap-modal modal project write">
+                    <div class="modal modal-content project write">
+                        <div class="btn modal-close"> x </div>
+                        <!-- <button type="button" class="btn modal-close">상단 x 버튼</button> -->
+                        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+                        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+                    </div>
+                </div>
+            </article>
+            <!-- 여기까지 모달부분 -->
             <article>
                 <h1 class="nanum-brush">Main Article</h1>
                 <p> quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
@@ -82,7 +102,7 @@
         </section>
         <aside>
             <input type="radio" name="n1" id="first" checked="checked">
-            <input type="radio" name="n1" id="second" >
+            <input type="radio" name="n1" id="second">
             <label for="first">First</label>
             <label for="second">second</label>
             <div class="tab-item">
@@ -176,6 +196,45 @@
             </address>
         </footer>
     </div>
+    <script>
+        $(loadedHandler);
+        function loadedHandler() {
+            //event 등록
+            //handler라는 네임이 들어가야 event관련 함수란 걸 알 수 있다
+            $(".btn.modal").on("click", btnModalClickHandler);
+            $(".btn.modal-close").on("click", btnModalCloseClickHandler);
+            $(".wrap-modal").on("click", btnModalCloseClickHandler);
+        }
+        function btnModalClickHandler() {
+            $(".section .wrap-modal").css("display", "block");
+        }
+
+        function btnModalCloseClickHandler(e) {
+            console.log(">>>>>>>>>event 확인하기 ");
+            console.log(e); //jQueryEvent 형태
+            console.log(event); //PointerEvent
+            //console.log(event); //만약 function의 파라미터로 event를 넣는다면 jQueryEvent --> 가장 가까운 곳의 것을 끌어오니까!!
+            //console.log(window.event);
+
+            console.log(">>>>>>>>>target 확인하기 ");
+            console.log(e.target);
+            console.log(event.target);
+            console.log(this);
+            
+            console.log(">>>>>>>>>document .... 확인하기 ");
+            console.log(document.getElementsByClassName("wrap-modal")[0]);
+            console.log($(".section .wrap-modal").get(0)); //위에랑 같은 것 
+
+            
+            if ((event.target == $(".section .wrap-modal").get(0) )|| (event.target == $(".btn.modal-close").get(0) )) {
+                //.wrap-model
+                $(".section .wrap-modal").css("display", "none");
+            }
+
+            //$(".section .wrap-modal").css("display", "none");
+        }
+
+    </script>
 </body>
 
 </html>
