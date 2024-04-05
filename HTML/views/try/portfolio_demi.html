@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .content-wrap{
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .write-table {
+            width: 100%;
+        }
+
+        .title {
+            width: 10%;
+        }
+
+        .notice-section {
+            width: 100%;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgb(161, 159, 159);
+        }
+
+        .notice-section .num {
+            width: 5%;
+        }
+
+        .notice-section .button-size {
+            width: 8%;
+        }
+
+        .notice-section .writer,
+        .notice-section .date {
+            width: 12%;
+        }
+
+        .notice-section .count {
+            width: 6%;
+        }
+
+        table input,
+        table textarea {
+            width: 300px;
+            resize: none;
+        }
+
+        .position {
+            position: relative;
+            left: 150px;
+        }
+
+        .notice thead,
+        .notice tfoot {
+            color: white;
+            background-color: coral;
+            text-align: center;
+        }
+
+        .notice tbody {
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrap">
+        <section>
+            <form action="insert.no">
+                <fieldset>
+                    <legend>공지사항 작성하기</legend>
+
+                    <table class="write-table">
+                        <tbody>
+                            <tr>
+                                <td class="title"><label for="title">제목</label></td>
+                                <td> <input type="text" id="title" name="title" placeholder="제목을 입력하세요" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="content">내용</label></td>
+                                <td> <textarea type="text" id="content" name="content" placeholder="내용을 입력하세요" cols="40"
+                                        rows="4" required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label for="input-file">첨부파일</label></td>
+                                <td> <input type="file" name="uploadFile" id="input-file"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <input class="position" type="submit" value="작성하기">
+                </fieldset>
+
+            </form>
+        </section>
+        <section class="notice-section">
+            <table border="1" class="notice">
+                <!-- 타이틀 부분 -->
+                <thead>
+                    <tr>
+                        <td class="num">번호</td>
+                        <td colspan="2">제목</td>
+                        <td class="writer">작성자</td>
+                        <td class="date">작성일</td>
+                        <td class="count">조회수</td>
+                    </tr>
+                </thead>
+                <!-- 첫번째 -->
+                <tbody>
+                    <tr>
+                        <td>9</td>
+                        <td>공지사항 제목9</td>
+                        <td class="button-size"><button type="button"
+                                onclick="location.href='http://www.google.com' ">바로가기</button></td>
+                        <td>user01</td>
+                        <td>2021-03-29</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>공지사항 제목6</td>
+                        <td><button type="button" onclick="location.href='http://www.google.com' ">바로가기</button></td>
+                        <td>answ445</td>
+                        <td>2021-03-12</td>
+                        <td>67</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>공지사항 제목3</td>
+                        <td><button type="button" onclick="location.href='http://www.google.com' ">바로가기</button></td>
+                        <td>testg12</td>
+                        <td>2021-03-01</td>
+                        <td>98</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>공지사항 제목2</td>
+                        <td><button type="button" onclick="location.href='http://www.google.com' ">바로가기</button></td>
+                        <td>palwe3</td>
+                        <td>2021-01-02</td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>공지사항 제목1</td>
+                        <td><button type="button" onclick="location.href='http://www.google.com' ">바로가기</button></td>
+                        <td>xml23</td>
+                        <td>2020-12-24</td>
+                        <td>124</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="4">전체공지사항 갯수</td>
+                    <td colspan="2">5개</td>
+                </tfoot>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>
